@@ -57,6 +57,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Lib\Json\BaseJson.cs" />
+    <Compile Include="Assets\Lib\Json\JsonPlayer.cs" />
+    <Compile Include="Assets\Lib\Json\Player.cs" />
+    <Compile Include="Assets\Lobby_Controller.cs" />
     <Compile Include="Assets\Resources\Script\Ball.cs" />
     <Compile Include="Assets\Resources\Script\Block.cs" />
     <Compile Include="Assets\Resources\Script\Death.cs" />

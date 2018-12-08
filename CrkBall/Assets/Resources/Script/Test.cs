@@ -4,23 +4,29 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-	private int[] type;
-	
+	public GameObject _gameObject;
 	// Use this for initialization
 	void Start () {
-		type = new int[7];
 
-		for (int i = 0; i < 7; i++)
-		{
-			type[i] = Random.Range(0, 2);
-			Debug.Log(type[i]);
-		}
-
-		
+		StartCoroutine(test());
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		
+	}
+	
+	IEnumerator test()
+	{
+		while (true)
+		{
+			if(_gameObject.transform.localScale.x > 50)
+				break;
+			
+			_gameObject.transform.localScale += new Vector3(1f,1f,0);
+			yield return new WaitForSeconds(0.01f);
+		}	
+		
 		
 	}
 }
