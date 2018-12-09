@@ -8,7 +8,7 @@ public class Arrow : MonoBehaviour,IPointerDownHandler
 {
 	public int kind;
 
-	public KindController kc;
+	public CreateImage CI;
 	// Use this for initialization
 	void Start () {
 		
@@ -21,8 +21,7 @@ public class Arrow : MonoBehaviour,IPointerDownHandler
 
 	public  void OnPointerDown(PointerEventData eventData )
 	{
-		kc.increase(kind);
-		
-		kc.MovePoint(kind);
+		CI.increase(kind);
+		CI.MovePoint(kind);
 	}
 }
