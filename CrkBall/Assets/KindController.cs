@@ -5,12 +5,19 @@ using UnityEngine.UI;
 
 public class KindController : MonoBehaviour
 {
+	private List<Sprite>[] ballimage;
 	private float Scalecount;
 	private int kind=5;
 	public Sprite[] image;
 	public Transform[] o_position;
 	public GameObject[] t_position;
 	public GameObject ballImage;
+
+	private void Awake()
+	{
+		
+	}
+
 	// Use this for initialization
 	void Start ()
 	{
