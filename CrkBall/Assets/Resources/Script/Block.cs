@@ -7,32 +7,41 @@ public class Block : MonoBehaviour
     public int block_hp;
     private int ball_attack;
     private TextMesh hp_text;
-    private int cash;
+    public int cash;
+    private StatusController statusController;
+
+    private void Awake()
+    {
+        statusController = GameObject.Find("Main Camera").GetComponent<StatusController>();
+    }
 
     // Use this for initialization
     void Start()
     {
+        statusController._baseStatus.blockStart(gameObject);
+        
         cash = block_hp;
         hp_text = gameObject.GetComponentInChildren<TextMesh>();
         ball_attack = GameObject.Find("Main Camera").GetComponent<Game_Controller>().ball_attack;
         hp_text.text = block_hp.ToString();
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {  
-        if (other.gameObject.name == "ball")
+
+    public void Beaten()
+    {
+        statusController._baseStatus.blockBeatean(gameObject);
+        block_hp -= ball_attack;
+
+        if (block_hp <= 0)
         {
-            block_hp -= ball_attack;
-
-            if (block_hp <= 0)
-            {
-                gameObject.GetComponentInParent<LineCreator>().LineCount -= 1;
-                GameObject.Find("Main Camera").GetComponent<Game_Controller>().cash += cash;
-                Destroy(gameObject);
-            }
-
-
-            hp_text.text = block_hp.ToString();
+            gameObject.GetComponentInParent<LineCreator>().LineCount -= 1;
+            GameObject.Find("Main Camera").GetComponent<Game_Controller>().cash += cash;
+            Destroy(gameObject);
         }
+
+
+        hp_text.text = block_hp.ToString();
     }
+    
+    
 }

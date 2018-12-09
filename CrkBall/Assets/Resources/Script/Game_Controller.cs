@@ -9,9 +9,8 @@ public class Game_Controller : MonoBehaviour
     [Header("Block_Lv")] public int Lv;
 
     private bool game;
-
     public GameObject GameObject;
-    public TextMesh Lv_Text,Cash;
+    public TextMesh Lv_Text, Cash;
     public int cash;
 
     // Use this for initialization
@@ -30,8 +29,6 @@ public class Game_Controller : MonoBehaviour
         if (GameObject.FindWithTag("Line") != null)
         {
             GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Line");
-
-
             StartCoroutine(droping(gameObjects));
         }
 
@@ -50,20 +47,23 @@ public class Game_Controller : MonoBehaviour
     {
         if (game)
         {
-            if (GameObject.FindGameObjectWithTag("Line").transform.position.y < -3.5)
+            if (GameObject.FindGameObjectWithTag("Line") != null)
             {
-                death();
-                game = false;
+                if (GameObject.FindGameObjectWithTag("Line").transform.position.y < -3.5)
+                {
+                    death();
+                    game = false;
+                }
             }
         }
 
-        Cash.text = "x "+cash.ToString();
+        Cash.text = "x " + cash;
     }
 
-   IEnumerator droping(GameObject[] gameObjects)
-   {
-       int count = 0;
-       
+    IEnumerator droping(GameObject[] gameObjects)
+    {
+        int count = 0;
+
         while (count < 10)
         {
             count++;
@@ -73,7 +73,7 @@ public class Game_Controller : MonoBehaviour
                 now.y -= 0.07f;
                 VARIABLE.transform.position = now;
             }
-            
+
             yield return new WaitForSeconds(0.01f);
         }
     }

@@ -57,9 +57,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Lib\Csv\Csv.cs" />
     <Compile Include="Assets\Lib\Json\BaseJson.cs" />
     <Compile Include="Assets\Lib\Json\JsonPlayer.cs" />
     <Compile Include="Assets\Lib\Json\Player.cs" />
+    <Compile Include="Assets\Lib\Treasure\Treasure.cs" />
     <Compile Include="Assets\Lobby_Controller.cs" />
     <Compile Include="Assets\Resources\Script\Ball.cs" />
     <Compile Include="Assets\Resources\Script\Block.cs" />
@@ -68,6 +70,12 @@
     <Compile Include="Assets\Resources\Script\LineCreator.cs" />
     <Compile Include="Assets\Resources\Script\Paddle.cs" />
     <Compile Include="Assets\Resources\Script\Test.cs" />
+    <Compile Include="Assets\Status\BaseStatus.cs" />
+    <Compile Include="Assets\Status\FireStatus.cs" />
+    <Compile Include="Assets\Status\NormalStatus.cs" />
+    <Compile Include="Assets\Status\StatusController.cs" />
+    <Compile Include="Assets\Status\ThunderStatus.cs" />
+    <Compile Include="Assets\t.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/CrkJK/Desktop/git/CrkBall/CrkBall/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

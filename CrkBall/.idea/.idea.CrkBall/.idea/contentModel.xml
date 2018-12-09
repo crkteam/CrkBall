@@ -9,10 +9,16 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="lib" t="Include">
+          <e p="Csv" t="Include">
+            <e p="Csv.cs" t="Include" />
+          </e>
           <e p="Json" t="Include">
             <e p="BaseJson.cs" t="Include" />
             <e p="JsonPlayer.cs" t="Include" />
             <e p="Player.cs" t="Include" />
+          </e>
+          <e p="Treasure" t="Include">
+            <e p="Treasure.cs" t="Include" />
           </e>
         </e>
         <e p="Lobby_Controller.cs" t="Include" />
@@ -44,6 +50,14 @@
             <e p="Test.cs" t="Include" />
           </e>
         </e>
+        <e p="Status" t="Include">
+          <e p="BaseStatus.cs" t="Include" />
+          <e p="FireStatus.cs" t="Include" />
+          <e p="NormalStatus.cs" t="Include" />
+          <e p="StatusController.cs" t="Include" />
+          <e p="ThunderStatus.cs" t="Include" />
+        </e>
+        <e p="t.cs" t="Include" />
       </e>
       <e p="CrkBall.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />

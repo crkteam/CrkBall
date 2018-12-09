@@ -1059,6 +1059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block_hp: 0
+  cash: 0
 --- !u!114 &114327665495471432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1071,6 +1072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block_hp: 0
+  cash: 0
 --- !u!114 &114469868387252554
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1083,6 +1085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block_hp: 0
+  cash: 0
 --- !u!114 &114514802429987964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1095,6 +1098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block_hp: 0
+  cash: 0
 --- !u!114 &114642134306817474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1107,6 +1111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block_hp: 0
+  cash: 0
 --- !u!114 &114899607351245422
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1119,6 +1124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block_hp: 0
+  cash: 0
 --- !u!114 &114935250075977266
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1131,6 +1137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block_hp: 0
+  cash: 0
 --- !u!212 &212149008948817156
 SpriteRenderer:
   m_ObjectHideFlags: 1

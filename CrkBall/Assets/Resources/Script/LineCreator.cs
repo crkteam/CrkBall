@@ -13,7 +13,7 @@ public class LineCreator : MonoBehaviour
     {
         //init
         Block_Hp = GameObject.Find("Main Camera").GetComponent<Game_Controller>().Lv;
-        Block = Resources.Load<GameObject>("Block");
+        Block = Resources.Load<GameObject>("Game/Block");
         LineCount = 0;
         //execute
         create();
