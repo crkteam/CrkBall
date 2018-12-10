@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class Paddle : MonoBehaviour
 {
-    private Rigidbody2D rigidbody2D;
-
     private Vector2 m_screenPos;
 
     // Use this for initialization
     void Start()
     {
-        rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -33,6 +30,21 @@ public class Paddle : MonoBehaviour
 //            }
         }
 
-        rigidbody2D.velocity = new Vector2(Input.GetAxis("Horizontal") * 10, 0);
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            GameObject block_x = GameObject.Find("RightBlock");
+            
+            if(!block_x.GetComponentInChildren<BoxCollider2D>().OverlapPoint(gameObject.transform.position + (gameObject.transform.right/2)*gameObject.transform.localScale.x))
+                gameObject.transform.position += new Vector3(0.05f,0);
+        }
+        
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            GameObject block_x = GameObject.Find("LeftBlock");
+            
+            if(!block_x.GetComponentInChildren<BoxCollider2D>().OverlapPoint(gameObject.transform.position - (gameObject.transform.right/2)*gameObject.transform.localScale.x))
+                gameObject.transform.position += new Vector3(-0.05f,0);
+
+        }
     }
 }

@@ -8,7 +8,7 @@ public class StatusController : MonoBehaviour
 
     private void Awake()
     {
-        status_init(1);
+        status_init(0);
     }
 
     void status_init(int codition)
