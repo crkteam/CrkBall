@@ -22,6 +22,16 @@ public class Game_Controller : MonoBehaviour
         InvokeRepeating("drop", 5, 5f);
     }
 
+    public void setAttack(int value)
+    {
+        ball_attack = value;
+        foreach (var block in GameObject.FindGameObjectsWithTag("Block"))
+        {
+            block.GetComponent<Block>().ball_attack = value;
+        }
+
+    }
+
     void drop()
     {
         Lv++;

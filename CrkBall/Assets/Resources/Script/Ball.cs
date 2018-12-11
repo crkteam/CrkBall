@@ -21,7 +21,7 @@ public class Ball : MonoBehaviour
         statusController._baseStatus.ballStart(gameObject);
         
         rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
-        rigidbody2D.velocity = new Vector2(5, 8);
+        rigidbody2D.velocity = new Vector2(4, 7);
     }
 
     // Update is called once per frame

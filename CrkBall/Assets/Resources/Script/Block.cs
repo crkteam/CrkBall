@@ -5,7 +5,7 @@ using UnityEngine;
 public class Block : MonoBehaviour
 {
     public int block_hp;
-    private int ball_attack;
+    public int ball_attack;
     private TextMesh hp_text;
     public int cash;
     private StatusController statusController;
