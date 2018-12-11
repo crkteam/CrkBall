@@ -9,7 +9,7 @@ public class CreateImage : MonoBehaviour
     private int[] json;
     private int point = 0;
     private List<GameObject> ballimage;
-
+    public GameObject BigBallimage;
     private void Awake()
     {
         ballimage = new List<GameObject>();
@@ -40,8 +40,9 @@ public class CreateImage : MonoBehaviour
         ballimage[point].transform.localScale=new Vector3(1f,1f,1f);
         if (point - 1 >= 0)
         ballimage[point-1].transform.localScale=new Vector3(0.5f,.5f,.5f);
-        if(point<=ballimage.Count)
+        if(point+1<=ballimage.Count-1)
         ballimage[point+1].transform.localScale=new Vector3(.5f,.5f,.5f);
+        BigBallimage.GetComponent<Image>().sprite = ballimage[point].GetComponent<Image>().sprite;
        
     }
     public void MovePoint(float move)
@@ -64,16 +65,17 @@ public class CreateImage : MonoBehaviour
         {
      
             ScalePoint += 0.04f;
+           
            ballimage[point].transform.localScale+=new Vector3(.04f,.04f,.04f);
             if (point - 1 >= 0)
             {
                 ballimage[point-1].transform.localScale -= new Vector3(.04f, .04f, .04f);
             }
-            if (point - 2 >= 0)
+            if (point - 2 >= 0)    
             {
                 ballimage[point-2].transform.localScale -= new Vector3(.04f, .04f, .04f);
             }
-            if(point<=ballimage.Count)
+            if(point+1<=ballimage.Count-1)
             ballimage[point+1].transform.localScale+=new Vector3(.04f,.04f,.04f);
             yield return  new  WaitForSeconds(.01f);
             if (ScalePoint>=.5f)
@@ -97,7 +99,7 @@ public class CreateImage : MonoBehaviour
             }
             if(point+1<=ballimage.Count)
                 ballimage[point+1].transform.localScale-=new Vector3(.04f,.04f,.04f);
-            if(point+2<=ballimage.Count)
+            if(point+2<=ballimage.Count-1)
                 ballimage[point+2].transform.localScale-=new Vector3(.04f,.04f,.04f);
             yield return  new  WaitForSeconds(.01f);
             if (ScalePoint>=.5f)
@@ -122,14 +124,27 @@ public class CreateImage : MonoBehaviour
 
             if (countp >= 250)
             {
-        				
+               
                 break;
             }
-            yield return new WaitForSeconds(.02f);
+            yield return new WaitForSeconds(.01f);
 			
 
         }
       
+    }
+
+    public void check(GameObject Arrow,GameObject Arrowopposite)
+    {
+        if (point == 0 || point == ballimage.Count-1)
+        {
+            Arrow.SetActive(false);;
+        }
+        else
+        {
+			
+            Arrowopposite.SetActive(true);
+        }
     }
     public void increase(int x)
     {
@@ -141,7 +156,16 @@ public class CreateImage : MonoBehaviour
     {
         initScale();
     }
-    
+
+    public int Getkind()
+    {
+        return point;
+    }
+
+    public int GetBallimageCount()
+    {
+        return ballimage.Count;
+    }
     // Update is called once per frame
     void Update()
     {
