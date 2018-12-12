@@ -1059,6 +1059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block_hp: 0
+  ball_attack: 0
   cash: 0
 --- !u!114 &114327665495471432
 MonoBehaviour:
@@ -1072,6 +1073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block_hp: 0
+  ball_attack: 0
   cash: 0
 --- !u!114 &114469868387252554
 MonoBehaviour:
@@ -1085,6 +1087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block_hp: 0
+  ball_attack: 0
   cash: 0
 --- !u!114 &114514802429987964
 MonoBehaviour:
@@ -1098,6 +1101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block_hp: 0
+  ball_attack: 0
   cash: 0
 --- !u!114 &114642134306817474
 MonoBehaviour:
@@ -1111,6 +1115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block_hp: 0
+  ball_attack: 0
   cash: 0
 --- !u!114 &114899607351245422
 MonoBehaviour:
@@ -1124,6 +1129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block_hp: 0
+  ball_attack: 0
   cash: 0
 --- !u!114 &114935250075977266
 MonoBehaviour:
@@ -1137,6 +1143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   block_hp: 0
+  ball_attack: 0
   cash: 0
 --- !u!212 &212149008948817156
 SpriteRenderer:

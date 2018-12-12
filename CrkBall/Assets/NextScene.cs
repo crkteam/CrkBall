@@ -20,5 +20,8 @@ public class NextScene : MonoBehaviour,IPointerDownHandler {
 	{
         		SceneManager.LoadScene("Main");
 	}
-	
+    public void OnMouseDown()
+    {
+        SceneManager.LoadScene("Main");
+    }
 }

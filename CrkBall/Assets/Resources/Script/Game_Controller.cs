@@ -12,6 +12,7 @@ public class Game_Controller : MonoBehaviour
     private bool game;
     public GameObject GameObject;
     public TextMesh Lv_Text, Cash;
+    public GameObject death_background;
     public int cash;
 
     // Use this for initialization
@@ -48,7 +49,8 @@ public class Game_Controller : MonoBehaviour
 
     public void death()
     {
-        Debug.Log("Death");
+        death_background.SetActive(true);
+
         CancelInvoke("drop");
         GameObject.Find("ball").SetActive(false);
     }

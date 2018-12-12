@@ -14,8 +14,9 @@ public class Death : MonoBehaviour {
 		GameObject.Find("Main Camera").GetComponent<Game_Controller>().death();
 	}
 
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }
