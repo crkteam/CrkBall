@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 
 public class Game_Controller : MonoBehaviour
@@ -67,9 +68,29 @@ public class Game_Controller : MonoBehaviour
             }
         }
 
-        Cash.text = "x " + cash;
+        Cash.text = cash.ToString();
     }
 
+    public void addCash(int cash)
+    {
+        this.cash += cash;
+        Cash.text = this.cash.ToString();
+        StartCoroutine(textchang());
+    }
+
+    IEnumerator textchang()
+    {
+        int count = 0;
+        Cash.transform.localScale = new Vector3(0.57f,0.57f);
+        while (count < 10)
+        {
+            count++;
+            Cash.transform.localScale -= new Vector3(0.05f,0.05f);
+            yield return new WaitForSeconds(0.01f);
+        }
+        Cash.transform.localScale = new Vector3(0.07f,0.07f);
+    }
+    
     IEnumerator droping(GameObject[] gameObjects)
     {
         int count = 0;

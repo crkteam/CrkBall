@@ -6,9 +6,12 @@ public class JsonPlayer : BaseJson
 
     public JsonPlayer()
     {
-       player = new Player();
+        player = new Player();
+
+        int[] buffer = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+        
         if (!check("MyPlayer"))
-            setAll(0);
+            setAll(0,0,0,buffer);
     }
 
     public int getcash()
@@ -16,9 +19,9 @@ public class JsonPlayer : BaseJson
         string data = load("MyPlayer");
         player = JsonUtility.FromJson<Player>(data);
 
-        return player.cash;
+        return player.totalPoint;
     }
-    
+
     public Player getAll()
     {
         string data = load("MyPlayer");
@@ -27,16 +30,12 @@ public class JsonPlayer : BaseJson
         return player;
     }
 
-    public void setAll(int lobby)
+    public void setAll(int total,int highPoint,int LastHighPoint,int[] ball)
     {
-        player.cash = lobby;
-                
-        save(player,"MyPlayer");
-    }
-
-    public void setCash(int cash)
-    {
-        player.cash = cash;
-        save(player,"MyPlayer");
+        player.totalPoint = total;
+        player.highPoint = highPoint;
+        player.LastHighPoint = LastHighPoint;
+        player.ball = ball;
+        save(player, "MyPlayer");
     }
 }

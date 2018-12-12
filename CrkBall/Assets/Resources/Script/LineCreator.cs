@@ -75,6 +75,7 @@ public class LineCreator : MonoBehaviour
         }
     }
 
+    
     void createBlock(float width)
     {
         GameObject prefabInstance = Instantiate(Block);

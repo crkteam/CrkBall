@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Player
 {
-    public int cash;
-    public int ballId;
-    public int ballLv;
-    public int paddleId;
-    public int paddleLv;
+    public int totalPoint;
+    public int highPoint;
+    public int LastHighPoint;
+    public int[] ball;
 }

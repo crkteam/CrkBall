@@ -35,7 +35,7 @@ public class Block : MonoBehaviour
         if (block_hp <= 0)
         {
             gameObject.GetComponentInParent<LineCreator>().LineCount -= 1;
-            GameObject.Find("Main Camera").GetComponent<Game_Controller>().cash += cash;
+            GameObject.Find("Main Camera").GetComponent<Game_Controller>().addCash(cash);
             Destroy(gameObject);
         }
 

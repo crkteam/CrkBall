@@ -7,19 +7,14 @@
       <e p="Assets" t="Include">
         <e p="Attack.cs" t="Include" />
         <e p="lib" t="Include">
-          <e p="Csv" t="Include">
-            <e p="Csv.cs" t="Include" />
-          </e>
           <e p="Json" t="Include">
             <e p="BaseJson.cs" t="Include" />
             <e p="JsonPlayer.cs" t="Include" />
             <e p="Player.cs" t="Include" />
           </e>
-          <e p="Treasure" t="Include">
-            <e p="Treasure.cs" t="Include" />
-          </e>
         </e>
         <e p="Lobby_Controller.cs" t="Include" />
+        <e p="NextScene.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="IngameDebugConsole" t="Include">
             <e p="README.txt" t="Include" />
@@ -38,6 +33,11 @@
           </e>
         </e>
         <e p="Resources" t="Include">
+          <e p="BallImage" t="Include">
+            <e p="Arrow.cs" t="Include" />
+            <e p="CreateImage.cs" t="Include" />
+            <e p="OpenMenu.cs" t="Include" />
+          </e>
           <e p="Script" t="Include">
             <e p="Ball.cs" t="Include" />
             <e p="Block.cs" t="Include" />
