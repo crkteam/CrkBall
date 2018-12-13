@@ -319,26 +319,28 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Attack.cs" />
-    <Compile Include="Assets\Lib\Csv\Csv.cs" />
     <Compile Include="Assets\Lib\Json\BaseJson.cs" />
     <Compile Include="Assets\Lib\Json\JsonPlayer.cs" />
     <Compile Include="Assets\Lib\Json\Player.cs" />
-    <Compile Include="Assets\Lib\Treasure\Treasure.cs" />
-    <Compile Include="Assets\Lobby_Controller.cs" />
+    <Compile Include="Assets\Lib\Status\BaseStatus.cs" />
+    <Compile Include="Assets\Lib\Status\FireStatus.cs" />
+    <Compile Include="Assets\Lib\Status\NormalStatus.cs" />
+    <Compile Include="Assets\Lib\Status\StatusController.cs" />
+    <Compile Include="Assets\Lib\Status\ThunderStatus.cs" />
+    <Compile Include="Assets\Resources\BallImage\Arrow.cs" />
+    <Compile Include="Assets\Resources\BallImage\CreateImage.cs" />
+    <Compile Include="Assets\Resources\BallImage\OpenMenu.cs" />
+    <Compile Include="Assets\Resources\Script\Attack.cs" />
     <Compile Include="Assets\Resources\Script\Ball.cs" />
     <Compile Include="Assets\Resources\Script\Block.cs" />
+    <Compile Include="Assets\Resources\Script\bound.cs" />
     <Compile Include="Assets\Resources\Script\Death.cs" />
     <Compile Include="Assets\Resources\Script\Game_Controller.cs" />
     <Compile Include="Assets\Resources\Script\LineCreator.cs" />
+    <Compile Include="Assets\Resources\Script\Lobby_Controller.cs" />
+    <Compile Include="Assets\Resources\Script\NextScene.cs" />
     <Compile Include="Assets\Resources\Script\Paddle.cs" />
     <Compile Include="Assets\Resources\Script\Test.cs" />
-    <Compile Include="Assets\Status\BaseStatus.cs" />
-    <Compile Include="Assets\Status\FireStatus.cs" />
-    <Compile Include="Assets\Status\NormalStatus.cs" />
-    <Compile Include="Assets\Status\StatusController.cs" />
-    <Compile Include="Assets\Status\ThunderStatus.cs" />
-    <Compile Include="Assets\test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Plugins\IngameDebugConsole\README.txt" />
