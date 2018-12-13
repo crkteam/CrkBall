@@ -9,4 +9,5 @@ public interface BaseStatus
     void ballStart(GameObject gameObject);
     void ballCollision(GameObject gameObject,Collision2D other);
     void ballTrigger(GameObject gameObject, Collider2D other);
+    GameObject createEffect();
 }

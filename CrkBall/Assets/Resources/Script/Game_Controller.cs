@@ -13,11 +13,21 @@ public class Game_Controller : MonoBehaviour
     public GameObject GameObject;
     public TextMesh Lv_Text, Cash;
     public GameObject death_background;
+    private GameObject effect;
+    private StatusController statusController;
     public int cash;
 
     // Use this for initialization
     void Start()
     {
+        statusController = GameObject.Find("Main Camera").GetComponent<StatusController>();
+        effect = statusController._baseStatus.createEffect();
+
+        if (effect != null)
+        {
+            GameObject effectGameObject = Instantiate(effect);
+        }
+
         game = true;
         Lv = 0;
         drop();
@@ -31,7 +41,6 @@ public class Game_Controller : MonoBehaviour
         {
             block.GetComponent<Block>().ball_attack = value;
         }
-
     }
 
     void drop()
@@ -83,16 +92,17 @@ public class Game_Controller : MonoBehaviour
     IEnumerator textchang()
     {
         int count = 0;
-        Cash.transform.localScale = new Vector3(0.57f,0.57f);
+        Cash.transform.localScale = new Vector3(0.57f, 0.57f);
         while (count < 10)
         {
             count++;
-            Cash.transform.localScale -= new Vector3(0.05f,0.05f);
+            Cash.transform.localScale -= new Vector3(0.05f, 0.05f);
             yield return new WaitForSeconds(0.01f);
         }
-        Cash.transform.localScale = new Vector3(0.07f,0.07f);
+
+        Cash.transform.localScale = new Vector3(0.07f, 0.07f);
     }
-    
+
     IEnumerator droping(GameObject[] gameObjects)
     {
         int count = 0;

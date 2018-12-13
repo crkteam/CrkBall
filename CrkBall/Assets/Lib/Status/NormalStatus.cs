@@ -8,6 +8,11 @@ public class NormalStatus : BaseStatus
     {
     }
 
+    public GameObject createEffect()
+    {
+        return null;
+    }
+    
     public void blockBeatean(GameObject gameObject)
     {
     }

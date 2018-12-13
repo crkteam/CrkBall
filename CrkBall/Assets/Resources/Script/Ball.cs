@@ -19,7 +19,7 @@ public class Ball : MonoBehaviour
     void Start()
     {
         statusController._baseStatus.ballStart(gameObject);
-
+        
         rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
         rigidbody2D.velocity = new Vector2(4, 7);
     }

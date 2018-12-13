@@ -4983,68 +4983,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf9ff442250654f4398ca0994501bbb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &480401450
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4464894088846536, guid: 6fdf193550e17ea4ca7222e292c65f46, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 4464894088846536, guid: 6fdf193550e17ea4ca7222e292c65f46, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 4464894088846536, guid: 6fdf193550e17ea4ca7222e292c65f46, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -3.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 4464894088846536, guid: 6fdf193550e17ea4ca7222e292c65f46, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4464894088846536, guid: 6fdf193550e17ea4ca7222e292c65f46, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4464894088846536, guid: 6fdf193550e17ea4ca7222e292c65f46, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4464894088846536, guid: 6fdf193550e17ea4ca7222e292c65f46, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4464894088846536, guid: 6fdf193550e17ea4ca7222e292c65f46, type: 2}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 198871818324652682, guid: 6fdf193550e17ea4ca7222e292c65f46,
-        type: 2}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 198871818324652682, guid: 6fdf193550e17ea4ca7222e292c65f46,
-        type: 2}
-      propertyPath: NoiseModule.strengthZ.scalar
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 198871818324652682, guid: 6fdf193550e17ea4ca7222e292c65f46,
-        type: 2}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 198871818324652682, guid: 6fdf193550e17ea4ca7222e292c65f46,
-        type: 2}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 6fdf193550e17ea4ca7222e292c65f46, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -5077,7 +5015,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71aeaf7e30add88408d454adcfa80bdb, type: 3}
   m_Name: 
@@ -5259,7 +5197,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 811876760}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.12, y: -9.41, z: 0.013477784}
+  m_LocalPosition: {x: -0.12, y: -6.59, z: 0.013477784}
   m_LocalScale: {x: 40.690487, y: 2.1571877, z: 1}
   m_Children: []
   m_Father: {fileID: 863133444}
@@ -10089,7 +10027,7 @@ GameObject:
   - component: {fileID: 1167659631}
   - component: {fileID: 1167659630}
   m_Layer: 0
-  m_Name: Light_00
+  m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10165,11 +10103,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1167659629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.64, y: -0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1208963301
 GameObject:

@@ -9,6 +9,12 @@ public class FireStatus : BaseStatus {
 		gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
 	}
 
+	public GameObject createEffect()
+	{
+		return null;
+	}
+
+
 	public void blockBeatean(GameObject gameObject)
 	{
 		

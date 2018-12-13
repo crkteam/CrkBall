@@ -46,6 +46,7 @@ public class Paddle : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
+            GameObject.Find("Main Camera").GetComponent<Game_Controller>().enabled = true;
             GameObject.Find("ball").GetComponent<Ball>().enabled = true;
             Destroy(GameObject.Find("start_text"));
 
@@ -59,6 +60,7 @@ public class Paddle : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
+            GameObject.Find("Main Camera").GetComponent<Game_Controller>().enabled = true;
             GameObject.Find("ball").GetComponent<Ball>().enabled = true;
             Destroy(GameObject.Find("start_text"));
 

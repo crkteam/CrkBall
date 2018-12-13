@@ -56,7 +56,7 @@ public class LineCreator : MonoBehaviour
 
     void createAttack(float width)
     {
-        int condition = Random.Range(0, 3);
+        int condition = Random.Range(0, 4);
 
         if (condition == 1)
         {
