@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class NextScene : MonoBehaviour,IPointerDownHandler {
-
+public class NextScene : MonoBehaviour,IPointerDownHandler
+{
+	public string SceneString;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,10 +19,10 @@ public class NextScene : MonoBehaviour,IPointerDownHandler {
 
 	public  void OnPointerDown(PointerEventData eventData)
 	{
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene(SceneString);
 	}
     public void OnMouseDown()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene(SceneString);
     }
 }
