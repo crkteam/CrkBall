@@ -5,16 +5,20 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="Attack.cs" t="Include" />
         <e p="lib" t="Include">
           <e p="Json" t="Include">
             <e p="BaseJson.cs" t="Include" />
             <e p="JsonPlayer.cs" t="Include" />
             <e p="Player.cs" t="Include" />
           </e>
+          <e p="Status" t="Include">
+            <e p="BaseStatus.cs" t="Include" />
+            <e p="FireStatus.cs" t="Include" />
+            <e p="NormalStatus.cs" t="Include" />
+            <e p="StatusController.cs" t="Include" />
+            <e p="ThunderStatus.cs" t="Include" />
+          </e>
         </e>
-        <e p="Lobby_Controller.cs" t="Include" />
-        <e p="NextScene.cs" t="Include" />
         <e p="Plugins" t="Include">
           <e p="IngameDebugConsole" t="Include">
             <e p="README.txt" t="Include" />
@@ -39,23 +43,19 @@
             <e p="OpenMenu.cs" t="Include" />
           </e>
           <e p="Script" t="Include">
+            <e p="Attack.cs" t="Include" />
             <e p="Ball.cs" t="Include" />
             <e p="Block.cs" t="Include" />
+            <e p="bound.cs" t="Include" />
             <e p="Death.cs" t="Include" />
             <e p="Game_Controller.cs" t="Include" />
             <e p="LineCreator.cs" t="Include" />
+            <e p="Lobby_Controller.cs" t="Include" />
+            <e p="NextScene.cs" t="Include" />
             <e p="Paddle.cs" t="Include" />
             <e p="Test.cs" t="Include" />
           </e>
         </e>
-        <e p="Status" t="Include">
-          <e p="BaseStatus.cs" t="Include" />
-          <e p="FireStatus.cs" t="Include" />
-          <e p="NormalStatus.cs" t="Include" />
-          <e p="StatusController.cs" t="Include" />
-          <e p="ThunderStatus.cs" t="Include" />
-        </e>
-        <e p="Test.cs" t="Include" />
       </e>
       <e p="CrkBall.sln" t="IncludeFlat" />
       <e p="Library" t="ExcludeRecursive" />

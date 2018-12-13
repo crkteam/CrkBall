@@ -19,7 +19,7 @@ public class Ball : MonoBehaviour
     void Start()
     {
         statusController._baseStatus.ballStart(gameObject);
-        
+
         rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
         rigidbody2D.velocity = new Vector2(4, 7);
     }
@@ -29,6 +29,8 @@ public class Ball : MonoBehaviour
     {
         speedX = rigidbody2D.velocity.x;
         speedY = rigidbody2D.velocity.y;
+        
+        handle();
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -41,18 +43,73 @@ public class Ball : MonoBehaviour
         statusController._baseStatus.ballTrigger(gameObject, other);
     }
 
-//    void handle()
-//    {
-//        rigidbody2D.velocity = new Vector2(speedhandleX(), rigidbody2D.velocity.y);
-//    }
-//
-//    float speedhandleX()
-//    {
-//        if (speedX > 100 && speedX > 0)
-//            return speedX = 6;
-//        else if (speedX < -100 && speedX < 0)
-//            return speedX = -6;
-//        else
-//            return rigidbody2D.velocity.x;
-//    }
+    void handle()
+    {
+        rigidbody2D.velocity = speedhandle();
+    }
+
+    Vector2 speedhandle()
+    {
+        float bsx = speedX;
+        float bsy = speedY;
+        if (speedX < 0)
+        {
+            bsx = bsx * -1;
+        }
+
+        if (speedY < 0)
+        {
+            bsy = bsy * -1;
+        }
+
+        if (bsx + bsy < 12)
+        {
+            if (bsx > 0)
+            {
+                bsx++;
+            }
+            else
+            {
+                bsx--;
+            }
+
+            if (bsy > 0)
+            {
+                bsy++;
+            }
+            else
+            {
+                bsy--;
+            }
+            
+            return new Vector2(bsx,bsy);
+        }
+        
+        if (bsx + bsy > 14)
+        {
+            if (bsx > 0)
+            {
+                bsx-=1;
+            }
+            else
+            {
+                bsx+=1;
+            }
+
+            
+            
+            if (bsy > 0)
+            {
+                bsy-=1;
+            }
+            else
+            {
+                bsy+=1;
+            }
+            
+            return new Vector2(bsx,bsy);
+        }
+
+        return new Vector2(speedX, speedY);
+    }
 }
