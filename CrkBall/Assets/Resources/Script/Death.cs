@@ -11,9 +11,11 @@ public class Death : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        GameObject.Find("death").GetComponent<AudioSource>().Play();
         GameObject.Find("Light").GetComponent<Animator>().transform.position = other.transform.position;
         GameObject.Find("Light").GetComponent<Animator>().SetTrigger("Light");
-        
+        GameObject.Find("game_music").GetComponent<AudioSource>().Stop();
+
         Invoke("wait",1);
     }
 

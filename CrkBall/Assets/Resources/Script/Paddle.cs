@@ -7,7 +7,7 @@ public class Paddle : MonoBehaviour
     private Vector2 m_screenPos;
     float block_x;
     float block_y;
-
+    private bool start = true;
 
     // Use this for initialization
     void Start()
@@ -46,8 +46,14 @@ public class Paddle : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            GameObject.Find("Main Camera").GetComponent<Game_Controller>().enabled = true;
-            GameObject.Find("ball").GetComponent<Ball>().enabled = true;
+            if (start)
+            {
+                GameObject.Find("game_music").GetComponent<AudioSource>().Play();
+                GameObject.Find("Main Camera").GetComponent<Game_Controller>().enabled = true;
+                GameObject.Find("ball").GetComponent<Ball>().enabled = true;
+
+                start = false;
+            }
             Destroy(GameObject.Find("start_text"));
 
 
@@ -60,8 +66,14 @@ public class Paddle : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            GameObject.Find("Main Camera").GetComponent<Game_Controller>().enabled = true;
-            GameObject.Find("ball").GetComponent<Ball>().enabled = true;
+            if (start)
+            {
+                GameObject.Find("game_music").GetComponent<AudioSource>().Play();
+                GameObject.Find("Main Camera").GetComponent<Game_Controller>().enabled = true;
+                GameObject.Find("ball").GetComponent<Ball>().enabled = true;
+
+                start = false;
+            }
             Destroy(GameObject.Find("start_text"));
 
 

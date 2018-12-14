@@ -35,6 +35,11 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        if (other.gameObject.name == "paddleBlu")
+        {
+            GameObject.Find("connect").GetComponent<AudioSource>().Play();
+        }
+
         statusController._baseStatus.ballCollision(gameObject, other);
     }
 

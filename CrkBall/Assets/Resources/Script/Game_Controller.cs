@@ -33,7 +33,7 @@ public class Game_Controller : MonoBehaviour
         drop();
         InvokeRepeating("drop", 5, 5f);
     }
-
+    
     public void setAttack(int value)
     {
         ball_attack = value;

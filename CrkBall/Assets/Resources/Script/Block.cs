@@ -34,12 +34,17 @@ public class Block : MonoBehaviour
 
         if (block_hp <= 0)
         {
+            GameObject.Find("burst").GetComponent<AudioSource>().Play();
             gameObject.GetComponent<ParticleSystem>().Play();
             gameObject.GetComponentInParent<LineCreator>().LineCount -= 1;
             GameObject.Find("Main Camera").GetComponent<Game_Controller>().addCash(cash);
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             Invoke("Destroy",1);
+        }
+        else
+        {
+            GameObject.Find("hit").GetComponent<AudioSource>().Play();
         }
 
 
