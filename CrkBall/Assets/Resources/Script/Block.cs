@@ -15,6 +15,11 @@ public class Block : MonoBehaviour
         statusController = GameObject.Find("Main Camera").GetComponent<StatusController>();
     }
 
+    private void Update()
+    {
+        
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -33,7 +38,9 @@ public class Block : MonoBehaviour
         block_hp -= ball_attack;
 
         if (block_hp <= 0)
+
         {
+            
             GameObject.Find("burst").GetComponent<AudioSource>().Play();
             gameObject.GetComponent<ParticleSystem>().Play();
             gameObject.GetComponentInParent<LineCreator>().LineCount -= 1;
@@ -44,7 +51,9 @@ public class Block : MonoBehaviour
         }
         else
         {
+            gameObject.GetComponent<Animator>().SetTrigger("attacked");
             GameObject.Find("hit").GetComponent<AudioSource>().Play();
+            
         }
 
 
