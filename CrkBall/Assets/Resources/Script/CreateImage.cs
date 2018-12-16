@@ -14,7 +14,7 @@ public class CreateImage : MonoBehaviour
     private void Awake()
     {
         ballimage = new List<GameObject>();
-        json = new[] {1, 2, 3, 4, 5};
+        json = new[] {1, 2, 3};
 
         GameObject image = Resources.Load<GameObject>("BallImage/Item");
 
@@ -22,7 +22,7 @@ public class CreateImage : MonoBehaviour
         foreach (var value in json)
         {
             GameObject buffer = Instantiate(image);
-            buffer.GetComponent<Image>().sprite = Resources.Load<Sprite>("BallImage/" + value);
+            buffer.GetComponent<Image>().sprite = Resources.Load<Sprite>("BallImage/ball" + value);
             buffer.transform.position = gameObject.transform.position;
             buffer.transform.position += new Vector3((value - 1) * 250, 0, 0);
             buffer.transform.localScale = new Vector3(1, 1, 1);
@@ -31,6 +31,13 @@ public class CreateImage : MonoBehaviour
         }
     }
 
+    void initPosition()
+    {
+        for (int i = 0; i < ballimage.Count; i++)
+        {
+            ballimage[i].GetComponent<RectTransform>().localPosition=new Vector3(-250*(point-i),0f,0f);
+        }
+    }
     void initScale()
     {
         foreach (var Scale in ballimage)
@@ -129,6 +136,7 @@ public class CreateImage : MonoBehaviour
 
             if (countp >= 250)
             {
+                initPosition();
                 break;
             }
 
