@@ -22,8 +22,6 @@ public class OpenMenu : MonoBehaviour, IPointerDownHandler
 
 	public  void OnPointerDown(PointerEventData eventData)
 	{
-		 
-		
 		StartCoroutine(ScaleUpDown(point));
 	}
 

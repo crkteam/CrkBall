@@ -5,14 +5,14 @@ using UnityEngine.UI;
 public class Lobby_Controller : MonoBehaviour
 {
 	private JsonPlayer Json;
-	private int Cash;
-	public Text Cash_text;
+	private int highPoint;
+	public Text highPoint_text;
 	
 	// Use this for initialization
 	void Start () {
 		Json = new JsonPlayer();
-		Cash = Json.getcash();
-		Cash_text.text = "x "+Cash;
+		highPoint = Json.gethighPoint();
+		highPoint_text.text = highPoint.ToString();
 	}
 	
 	// Update is called once per frame

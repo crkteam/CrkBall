@@ -8,6 +8,7 @@ public class Attack : MonoBehaviour {
 	{
 		if (other.gameObject.name == "ball")
 		{
+			GameObject.Find("attack").GetComponent<AudioSource>().Play();
 			int attack = nowAttack();;
 			GameObject.Find("Main Camera").GetComponent<Game_Controller>().setAttack(++attack);
 			Destroy(gameObject);

@@ -15,11 +15,13 @@ public class Game_Controller : MonoBehaviour
     public GameObject death_background;
     private GameObject effect;
     private StatusController statusController;
+    private ResultController resultController;
     public int cash;
 
     // Use this for initialization
     void Start()
     {
+        
         statusController = GameObject.Find("Main Camera").GetComponent<StatusController>();
         effect = statusController._baseStatus.createEffect();
 
@@ -33,6 +35,8 @@ public class Game_Controller : MonoBehaviour
         drop();
         InvokeRepeating("drop", 5, 5f);
     }
+    
+    
     
     public void setAttack(int value)
     {
@@ -58,6 +62,7 @@ public class Game_Controller : MonoBehaviour
 
     public void death()
     {
+        resultController = new ResultController();
         death_background.SetActive(true);
 
         CancelInvoke("drop");

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+    <e p="C:\Users\CrkJK\.Rider2018.2\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\CrkJK\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\CrkJK\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_CrkBall.-524726543.00" t="ExcludeRecursive" />
+    <e p="C:\Users\CrkJK\Desktop\git\CrkBall\CrkBall" t="IncludeRecursive">
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -37,22 +40,21 @@
           </e>
         </e>
         <e p="Resources" t="Include">
-          <e p="BallImage" t="Include">
-            <e p="Arrow.cs" t="Include" />
-            <e p="CreateImage.cs" t="Include" />
-            <e p="OpenMenu.cs" t="Include" />
-          </e>
           <e p="Script" t="Include">
+            <e p="Arrow.cs" t="Include" />
             <e p="Attack.cs" t="Include" />
             <e p="Ball.cs" t="Include" />
             <e p="Block.cs" t="Include" />
             <e p="bound.cs" t="Include" />
+            <e p="CreateImage.cs" t="Include" />
             <e p="Death.cs" t="Include" />
             <e p="Game_Controller.cs" t="Include" />
             <e p="LineCreator.cs" t="Include" />
             <e p="Lobby_Controller.cs" t="Include" />
             <e p="NextScene.cs" t="Include" />
+            <e p="OpenMenu.cs" t="Include" />
             <e p="Paddle.cs" t="Include" />
+            <e p="ResultController.cs" t="Include" />
             <e p="Test.cs" t="Include" />
             <e p="Timeout.cs" t="Include" />
           </e>
@@ -66,8 +68,5 @@
         <e p="bin" t="ExcludeRecursive" />
       </e>
     </e>
-    <e p="$USER_HOME$/Library/Caches/Rider2018.2/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2018.2/resharper-host/local/Transient/ReSharperHost/v182/SolutionCaches/_CrkBall.297846707.00" t="ExcludeRecursive" />
-    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
   </component>
 </project>
