@@ -11,7 +11,7 @@ public class OpenMenu : MonoBehaviour, IPointerDownHandler
 	// Use this for initialization
 	void Start()
 	{
-		Menu.GetComponent<RectTransform>().localScale=new Vector3(0,0,0);
+		Menu.GetComponent<RectTransform>().localScale=new Vector3(.01f,.01f,.01f);
 	}
 
 	// Update is called once per frame
