@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class Timeout : MonoBehaviour
 {
-	public GameObject PauseText,paddle;
- private bool timeout = false;
+	public GameObject paddle;
+
+	public PauseController PC;
 	// Use this for initialization
 	void Start () {
 		
@@ -19,23 +20,9 @@ public class Timeout : MonoBehaviour
 
 	private void OnMouseDown()
 	{
-		if (timeout)
-		{
-			
-			Time.timeScale = 1;
-			paddle.GetComponent<Paddle>().enabled = true;
-			gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Image/Stop");
-			
-		}
-		else
-		{
-			
-			Time.timeScale = 0;
-			paddle.GetComponent<Paddle>().enabled = false;
-			gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Image/Resume");
-		}
-		timeout = !timeout;
-		PauseText.SetActive(!PauseText.activeSelf);
+		Time.timeScale = 0;
+		PC.Pause();
+		paddle.GetComponent<Paddle>().enabled = false;
 	}
 	
 }

@@ -82,7 +82,10 @@
     <Compile Include="Assets\Resources\Script\NextScene.cs" />
     <Compile Include="Assets\Resources\Script\OpenMenu.cs" />
     <Compile Include="Assets\Resources\Script\Paddle.cs" />
+    <Compile Include="Assets\Resources\Script\PauseController.cs" />
+    <Compile Include="Assets\Resources\Script\Quit.cs" />
     <Compile Include="Assets\Resources\Script\ResultController.cs" />
+    <Compile Include="Assets\Resources\Script\Resume.cs" />
     <Compile Include="Assets\Resources\Script\Test.cs" />
     <Compile Include="Assets\Resources\Script\Timeout.cs" />
     <Reference Include="UnityEditor.StandardEvents">

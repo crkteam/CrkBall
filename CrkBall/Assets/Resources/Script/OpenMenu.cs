@@ -8,10 +8,11 @@ public class OpenMenu : MonoBehaviour, IPointerDownHandler
 {
 	public int point;
 	public GameObject Menu;
+    public GameObject Opposite;
 	// Use this for initialization
 	void Start()
 	{
-		Menu.GetComponent<RectTransform>().localScale=new Vector3(.01f,.01f,.01f);
+		Menu.GetComponent<RectTransform>().localScale=new Vector3(.0f,.0f,.0f);
 	}
 
 	// Update is called once per frame
@@ -23,7 +24,9 @@ public class OpenMenu : MonoBehaviour, IPointerDownHandler
 	public  void OnPointerDown(PointerEventData eventData)
 	{
 		StartCoroutine(ScaleUpDown(point));
-	}
+        gameObject.GetComponent<OpenMenu>().enabled = false;
+        Opposite.GetComponent<OpenMenu>().enabled = true;
+    }
 
 	IEnumerator ScaleUpDown(int point)
 	{
