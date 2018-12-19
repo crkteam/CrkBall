@@ -9,9 +9,12 @@ public class OpenMenu : MonoBehaviour, IPointerDownHandler
 	public int point;
 	public GameObject Menu;
     public GameObject Opposite;
+
+	private AudioSource ZommOut;
 	// Use this for initialization
 	void Start()
 	{
+		ZommOut=GameObject.Find("ZoomOut").GetComponent<AudioSource>();
 		Menu.GetComponent<RectTransform>().localScale=new Vector3(.0f,.0f,.0f);
 	}
 
@@ -23,6 +26,7 @@ public class OpenMenu : MonoBehaviour, IPointerDownHandler
 
 	public  void OnPointerDown(PointerEventData eventData)
 	{
+		ZommOut.Play();
 		StartCoroutine(ScaleUpDown(point));
         gameObject.GetComponent<OpenMenu>().enabled = false;
         Opposite.GetComponent<OpenMenu>().enabled = true;

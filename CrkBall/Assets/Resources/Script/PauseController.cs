@@ -10,6 +10,7 @@ public class PauseController : MonoBehaviour
 	public GameObject paddle;
 	public GameObject PauseBackground;
 	public GameObject[] item;
+	private AsyncOperation AO;
 	// Use this for initialization
 	void Start () {
 		
@@ -39,6 +40,22 @@ public class PauseController : MonoBehaviour
 
 	IEnumerator PauseOut()
 	{
+		switch (point)
+		{
+			case 1:
+				AO = SceneManager.LoadSceneAsync("Main");
+				AO.allowSceneActivation=false;
+				
+			
+				break;
+			case 2:
+				AO = SceneManager.LoadSceneAsync("Lobby");
+				AO.allowSceneActivation=false;
+
+	
+				break;
+		}
+		
 		PauseBackground.GetComponent<Animator>().SetTrigger("quit");
 		yield return new WaitForSeconds(.01f);
 		switch (point)
@@ -46,14 +63,10 @@ public class PauseController : MonoBehaviour
 				paddle.GetComponent<Paddle>().enabled = true;
 				PauseBackground.SetActive(false);
 				break;
-			case 1:
-				
-				SceneManager.LoadScene("Main");
-				break;
-			case 2:
-		
-				SceneManager.LoadScene("Lobby");
-				break;
+		default:
+			AO.allowSceneActivation = true;
+			break;
+			
 		}
         		PauseBackground.SetActive(false);
 	}

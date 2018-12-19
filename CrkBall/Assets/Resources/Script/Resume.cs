@@ -5,11 +5,12 @@ using UnityEngine;
 public class Resume : MonoBehaviour
 {
 	public PauseController PC;
-
+	private AudioSource click;
 	public int point;
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+		click = GameObject.Find("Click").GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -19,6 +20,7 @@ public class Resume : MonoBehaviour
 
 	private void OnMouseDown()
 	{
+		click.Play();
 		PC.SetPoint(point);
 		PC.PauseQuit();
 	}

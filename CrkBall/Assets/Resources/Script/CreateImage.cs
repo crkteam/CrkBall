@@ -9,8 +9,10 @@ public class CreateImage : MonoBehaviour
     private int[] json;
     private int point = 0;
     private List<GameObject> ballimage;
-    public GameObject BigBallimage;
+    public GameObject BigBallimage,BtnBallChangeImage;
+    
     private JsonPlayer j;
+    private AudioClip Clip;
     private GameObject ArrowLeft;
     private void Awake()
     {
@@ -35,7 +37,12 @@ public class CreateImage : MonoBehaviour
             ArrowLeft.SetActive(false);
 
     }
-    
+
+    public  void Playmusic()
+    {
+        gameObject.GetComponent<AudioSource>().Play();
+        
+    }
 
     string check(int value,int point)
     {
@@ -72,6 +79,7 @@ public class CreateImage : MonoBehaviour
         if (point + 1 <= ballimage.Count - 1)
             ballimage[point + 1].transform.localScale = new Vector3(.5f, .5f, .5f);
         BigBallimage.GetComponent<Image>().sprite = ballimage[point].GetComponent<Image>().sprite;
+        BtnBallChangeImage.GetComponent<Image>().sprite = ballimage[point].GetComponent<Image>().sprite;
     }
 
     public void MovePoint(float move)
@@ -177,6 +185,7 @@ public class CreateImage : MonoBehaviour
         {
             Arrowopposite.SetActive(true);
         }
+        
     }
 
     public void increase(int x)

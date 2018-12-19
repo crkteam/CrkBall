@@ -25,7 +25,7 @@ public class Arrow : MonoBehaviour,IPointerDownHandler
 	public  void OnPointerDown(PointerEventData eventData )
 	{
 		
-			
+		CI.Playmusic();
 		CI.increase(kind);
 		CI.MovePoint(kind);
 		CI.check(gameObject,Arrowopposite);

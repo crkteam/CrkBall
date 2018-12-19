@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class Timeout : MonoBehaviour
 {
 	public GameObject paddle;
-
 	public PauseController PC;
+
+	private AudioSource click;
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+		click = GameObject.Find("Click").GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -20,6 +22,7 @@ public class Timeout : MonoBehaviour
 
 	private void OnMouseDown()
 	{
+		click.Play();
 		Time.timeScale = 0;
 		PC.Pause();
 		paddle.GetComponent<Paddle>().enabled = false;
