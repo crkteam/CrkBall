@@ -9,9 +9,12 @@ public class Arrow : MonoBehaviour,IPointerDownHandler
 {
 	public int kind;
 	public GameObject Arrowopposite;
+	private GameObject ArrowLeft;
 	public CreateImage CI;
 	// Use this for initialization
 	void Start () {
+
+		
 	}
 	
 	// Update is called once per frame
@@ -21,6 +24,8 @@ public class Arrow : MonoBehaviour,IPointerDownHandler
 
 	public  void OnPointerDown(PointerEventData eventData )
 	{
+		
+			
 		CI.increase(kind);
 		CI.MovePoint(kind);
 		CI.check(gameObject,Arrowopposite);

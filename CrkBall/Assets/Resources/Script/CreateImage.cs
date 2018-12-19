@@ -10,29 +10,50 @@ public class CreateImage : MonoBehaviour
     private int point = 0;
     private List<GameObject> ballimage;
     public GameObject BigBallimage;
-
+    private JsonPlayer j;
+    private GameObject ArrowLeft;
     private void Awake()
     {
         ballimage = new List<GameObject>();
         json = new[] {1, 2, 3};
-
+        j=new JsonPlayer();
         GameObject image = Resources.Load<GameObject>("Ball/Ball_Image/item");
 
-
-        foreach (var value in json)
+        for (int i = 0; i < j.getBall().Length; i++)
         {
-            GameObject buffer = Instantiate(image);
-            buffer.GetComponent<Image>().sprite = Resources.Load<Sprite>("Ball/Ball_Image/" + value);
-            buffer.transform.position = gameObject.transform.position;
-            buffer.transform.position += new Vector3((value - 1) * 250, 0, 0);
-            buffer.transform.localScale = new Vector3(1, 1, 1);
-            buffer.transform.SetParent(gameObject.transform);
-            ballimage.Add(buffer);
+                        GameObject buffer = Instantiate(image);
+                        buffer.GetComponent<Image>().sprite = Resources.Load<Sprite>(check(j.getBall()[i],i));
+                        buffer.transform.position = gameObject.transform.position;
+                        buffer.transform.position += new Vector3((i) * 250, 0, 0);
+                        buffer.transform.localScale = new Vector3(1, 1, 1);
+                        buffer.transform.SetParent(gameObject.transform);
+                        ballimage.Add(buffer);
+        }
+        		
+        ArrowLeft=GameObject.Find("BallCnangeArrowL");
+        if(Getkind()==0)
+            ArrowLeft.SetActive(false);
+
+    }
+    
+
+    string check(int value,int point)
+    {
+        switch (value)
+        {
+                case 0:
+                    return "Ball/Ball_Image/unlock";
+
+                  default:
+                      if (value == 2)
+                          this.point =point;
+                      return "Ball/Ball_Image/ball"+point;
+                      
         }
     }
     void initPostion()
     {
-        for(int i = 0; i <= ballimage.Count; i++)
+        for(int i = 0; i < ballimage.Count; i++)
         {
             ballimage[i].transform.localPosition = new Vector3(-250*(point-i), 0f, 0f);
         }
@@ -167,6 +188,8 @@ public class CreateImage : MonoBehaviour
     void Start()
     {
         initScale();
+        initPostion();
+      //  initPostion();
     }
 
     public int Getkind()
@@ -176,6 +199,7 @@ public class CreateImage : MonoBehaviour
 
     public int GetBallimageCount()
     {
+     
         return ballimage.Count;
     }
 
