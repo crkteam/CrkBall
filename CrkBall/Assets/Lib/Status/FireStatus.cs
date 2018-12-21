@@ -7,6 +7,7 @@ public class FireStatus : BaseStatus {
 	public void blockStart(GameObject gameObject)
 	{
 		gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
+		
 	}
 
 	public GameObject createEffect()

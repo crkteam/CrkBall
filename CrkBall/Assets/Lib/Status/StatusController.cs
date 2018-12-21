@@ -1,14 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using IngameDebugConsole;
 using UnityEngine;
 
 public class StatusController : MonoBehaviour
 {
     public BaseStatus _baseStatus;
+    private JsonPlayer _jsonPlayer;
 
     private void Awake()
     {
-        status_init(0);
+        _jsonPlayer = new JsonPlayer();
+        int count = 0;
+        foreach (var value in _jsonPlayer.getBall())
+        {
+            if (value == 2)
+            {
+                break;
+            }
+
+            count++;
+        }
+
+        status_init(count);
     }
 
     void status_init(int codition)
@@ -19,9 +33,16 @@ public class StatusController : MonoBehaviour
                 _baseStatus = new NormalStatus();
                 break;
             case 1:
+                Destroy(GameObject.Find("ball"));
+                Instantiate(Resources.Load("Ball/Fireball/ball"));
+                GameObject.Find("ball(Clone)").gameObject.name = "ball";
                 _baseStatus = new FireStatus();
                 break;
             case 2:
+                Destroy(GameObject.Find("ball"));
+                Instantiate(Resources.Load("Ball/Thunderball/ball"));
+                Instantiate(Resources.Load("Ball/Thunderball/thunder"));
+                GameObject.Find("ball(Clone)").gameObject.name = "ball";
                 _baseStatus = new ThunderStatus();
                 break;
         }

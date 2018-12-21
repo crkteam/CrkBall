@@ -21,7 +21,6 @@ public class Game_Controller : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        
         statusController = GameObject.Find("Main Camera").GetComponent<StatusController>();
         effect = statusController._baseStatus.createEffect();
 
@@ -32,12 +31,10 @@ public class Game_Controller : MonoBehaviour
 
         game = true;
         Lv = 0;
-        drop();
-        InvokeRepeating("drop", 5, 5f);
+        InvokeRepeating("drop", 0, 5f);
     }
-    
-    
-    
+
+
     public void setAttack(int value)
     {
         ball_attack = value;
@@ -50,10 +47,11 @@ public class Game_Controller : MonoBehaviour
     void drop()
     {
         Lv++;
-        Lv_Text.text = "Lv" + Lv.ToString();
+        Lv_Text.text = "Lv" + Lv;
         if (GameObject.FindWithTag("Line") != null)
         {
             GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Line");
+
             StartCoroutine(droping(gameObjects));
         }
 
