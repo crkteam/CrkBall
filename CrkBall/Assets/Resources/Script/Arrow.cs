@@ -8,8 +8,6 @@ using UnityEngine.UI;
 public class Arrow : MonoBehaviour,IPointerDownHandler
 {
 	public int kind;
-	public GameObject Arrowopposite;
-	private GameObject ArrowLeft;
 	public CreateImage CI;
 	// Use this for initialization
 	void Start () {
@@ -28,6 +26,6 @@ public class Arrow : MonoBehaviour,IPointerDownHandler
 		CI.Playmusic();
 		CI.increase(kind);
 		CI.MovePoint(kind);
-		CI.check(gameObject,Arrowopposite);
+		CI.check();
 	}
 }

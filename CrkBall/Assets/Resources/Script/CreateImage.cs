@@ -3,28 +3,27 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
 public class CreateImage : MonoBehaviour
 {
-    private int[] json;
     private int point = 0;
     private List<GameObject> ballimage;
     public GameObject BigBallimage,BtnBallChangeImage;
-    
-    private JsonPlayer j;
+    private JsonPlayer json;
     private AudioClip Clip;
-    private GameObject ArrowLeft;
+    private GameObject ArrowLeft,btncheck,Arrow,Arrowopposite;
     private void Awake()
     {
         ballimage = new List<GameObject>();
-        json = new[] {1, 2, 3};
-        j=new JsonPlayer();
+   
+        json=new JsonPlayer();
         GameObject image = Resources.Load<GameObject>("Ball/Ball_Image/item");
 
-        for (int i = 0; i < j.getBall().Length; i++)
+        for (int i = 0; i < json.getBall().Length; i++)
         {
                         GameObject buffer = Instantiate(image);
-                        buffer.GetComponent<Image>().sprite = Resources.Load<Sprite>(check(j.getBall()[i],i));
+                        buffer.GetComponent<Image>().sprite = Resources.Load<Sprite>(check(json.getBall()[i],i));
                         buffer.transform.position = gameObject.transform.position;
                         buffer.transform.position += new Vector3((i) * 250, 0, 0);
                         buffer.transform.localScale = new Vector3(1, 1, 1);
@@ -33,11 +32,29 @@ public class CreateImage : MonoBehaviour
         }
         		
         ArrowLeft=GameObject.Find("BallCnangeArrowL");
+        Arrow = GameObject.Find("BallCnangeArrowL");
+        Arrowopposite = GameObject.Find("BallChangeArrow");
+        btncheck=GameObject.Find("BallExit");
         if(Getkind()==0)
             ArrowLeft.SetActive(false);
+     
+    }
+    public void WriteData()
+    {
+        int []temp = json.getBall();
+        for (int i = 0; i < temp.Length; i++)
+        {
+            if (temp[i] == 2)
+            {
+                Debug.Log(i);
+                temp[i] = 1;
+            }
+        }
+
+        temp[point] = 2;
+        json.setBall(temp);
 
     }
-
     public  void Playmusic()
     {
         gameObject.GetComponent<AudioSource>().Play();
@@ -174,16 +191,35 @@ public class CreateImage : MonoBehaviour
       
     }
 
-    public void check(GameObject Arrow, GameObject Arrowopposite)
+    public void check()
     {
-        if (point == 0 || point == ballimage.Count - 1)
+        Color c =new Color(1f,1f,1f,1f);
+        if (json.getBall()[point]==0)
         {
+            c.a = .5f;
+            btncheck.GetComponent<Image>().color= c;
+            btncheck.GetComponent<OpenMenu>().enabled = false;
+        }
+        else
+        {
+            c.a = 1f;
+            btncheck.GetComponent<Image>().color= c;
+            btncheck.GetComponent<OpenMenu>().enabled = true;
+        }
+        if (point == 0)
+        {
+            Arrowopposite.SetActive(true);
             Arrow.SetActive(false);
-            
+        }
+        else if (point == ballimage.Count - 1)
+        {
+            Arrow.SetActive(true);
+            Arrowopposite.SetActive(false);
         }
         else
         {
             Arrowopposite.SetActive(true);
+            Arrow.SetActive(true);
         }
         
     }

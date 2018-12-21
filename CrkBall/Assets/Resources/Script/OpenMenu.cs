@@ -9,8 +9,9 @@ public class OpenMenu : MonoBehaviour, IPointerDownHandler
 	public int point;
 	public GameObject Menu;
     public GameObject Opposite;
-
 	private AudioSource ZommOut;
+	public CreateMusic CM;
+	public CreateImage CI;
 	// Use this for initialization
 	void Start()
 	{
@@ -30,6 +31,8 @@ public class OpenMenu : MonoBehaviour, IPointerDownHandler
 		StartCoroutine(ScaleUpDown(point));
         gameObject.GetComponent<OpenMenu>().enabled = false;
         Opposite.GetComponent<OpenMenu>().enabled = true;
+		CM.WriteData();
+		CI.WriteData();
     }
 
 	IEnumerator ScaleUpDown(int point)

@@ -62,6 +62,9 @@
     <Compile Include="Assets\Lib\Status\NormalStatus.cs" />
     <Compile Include="Assets\Lib\Status\StatusController.cs" />
     <Compile Include="Assets\Lib\Status\ThunderStatus.cs" />
+    <Compile Include="Assets\MusicController.cs" />
+    <Compile Include="Assets\Resources\CreateMusic.cs" />
+    <Compile Include="Assets\Resources\MusicArrow.cs" />
     <Compile Include="Assets\Resources\Script\Arrow.cs" />
     <Compile Include="Assets\Resources\Script\Attack.cs" />
     <Compile Include="Assets\Resources\Script\Ball.cs" />
@@ -83,11 +86,6 @@
     <Compile Include="Assets\Resources\Script\Resume.cs" />
     <Compile Include="Assets\Resources\Script\Test.cs" />
     <Compile Include="Assets\Resources\Script\Timeout.cs" />
-    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
-    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-database-unity\maven-metadata.xml" />
-    <None Include="Assets\Firebase\Plugins\link.xml" />
-    <None Include="Assets\Firebase\Plugins\Http\link.xml" />
-    <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>/Users/littleg/Desktop/crk/CrkBall/CrkBall/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -286,6 +284,12 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Compat">
+      <HintPath>/Users/littleg/Desktop/crk/CrkBall/CrkBall/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Tasks">
+      <HintPath>/Users/littleg/Desktop/crk/CrkBall/CrkBall/Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>/Users/littleg/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
@@ -294,30 +298,6 @@
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>/Users/littleg/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Auth">
-      <HintPath>/Users/littleg/Desktop/crk/CrkBall/CrkBall/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Compat">
-      <HintPath>/Users/littleg/Desktop/crk/CrkBall/CrkBall/Assets/Parse/Plugins/dotNet45/Unity.Compat.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.MiniJson">
-      <HintPath>/Users/littleg/Desktop/crk/CrkBall/CrkBall/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.App">
-      <HintPath>/Users/littleg/Desktop/crk/CrkBall/CrkBall/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Platform">
-      <HintPath>/Users/littleg/Desktop/crk/CrkBall/CrkBall/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="Firebase.Database">
-      <HintPath>/Users/littleg/Desktop/crk/CrkBall/CrkBall/Assets/Firebase/Plugins/Mono/Firebase.Database.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Tasks">
-      <HintPath>/Users/littleg/Desktop/crk/CrkBall/CrkBall/Assets/Parse/Plugins/dotNet45/Unity.Tasks.dll</HintPath>
-    </Reference>
-    <Reference Include="Google.Sharpen">
-      <HintPath>/Users/littleg/Desktop/crk/CrkBall/CrkBall/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>/Applications/Unity/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

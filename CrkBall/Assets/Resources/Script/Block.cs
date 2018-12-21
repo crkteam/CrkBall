@@ -47,7 +47,8 @@ public class Block : MonoBehaviour
             GameObject.Find("Main Camera").GetComponent<Game_Controller>().addCash(cash);
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
-            Invoke("Destroy",1);
+            Destroy(gameObject,1);
+
         }
         else
         {
@@ -60,10 +61,7 @@ public class Block : MonoBehaviour
         hp_text.text = block_hp.ToString();
         }
 
-    void Destroy()
-    {
-        Destroy(gameObject);
-    }
+   
 }
 
    

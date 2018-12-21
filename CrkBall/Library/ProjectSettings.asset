@@ -152,6 +152,7 @@ PlayerSettings:
   applicationIdentifier:
     Android: com.CrkTeam.CrkBall
     Standalone: com.Company.ProductName
+    iOS: com.crkteam.crkball
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
@@ -805,7 +806,7 @@ PlayerSettings:
   cloudServicesEnabled:
     UNet: 1
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: 5c422a50-ddd1-4e0f-953d-bedd94e37fe1
   projectName: CrkBall
   organizationId: jack0910
