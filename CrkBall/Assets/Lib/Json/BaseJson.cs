@@ -5,7 +5,7 @@ public class BaseJson
 {
     protected void save(object data, string name)
     {
-        StreamWriter file = new StreamWriter(Path.Combine(Application.absoluteURL, name));
+        StreamWriter file = new StreamWriter(Path.Combine(Application.persistentDataPath, name));
         string saveString = JsonUtility.ToJson(data);
         file.Write(saveString);
         file.Close();
@@ -13,7 +13,7 @@ public class BaseJson
 
     protected string load(string name)
     {
-        StreamReader file = new StreamReader(Path.Combine(Application.absoluteURL, name));
+        StreamReader file = new StreamReader(Path.Combine(Application.persistentDataPath, name));
         string loadJson = file.ReadToEnd();
         file.Close();
         return loadJson;
@@ -23,7 +23,7 @@ public class BaseJson
     {
         try
         {
-            StreamReader file = new StreamReader(Path.Combine(Application.absoluteURL, name));
+            StreamReader file = new StreamReader(Path.Combine(Application.persistentDataPath, name));
             file.Close();
         }
         catch (FileNotFoundException e)

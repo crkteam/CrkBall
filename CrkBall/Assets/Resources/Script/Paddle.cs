@@ -5,17 +5,11 @@ using UnityEngine;
 public class Paddle : MonoBehaviour
 {
     private Vector2 m_screenPos;
-    float block_x;
-    float block_y;
     private bool start = true;
 
     // Use this for initialization
     void Start()
     {
-        block_x = GameObject.Find("RightBlock").transform.position.x -
-                  GameObject.Find("RightBlock").transform.right.x / 2;
-        block_y = GameObject.Find("LeftBlock").transform.position.x +
-                  GameObject.Find("LeftBlock").transform.right.x / 2;
     }
 
     // Update is called once per frame
@@ -23,24 +17,25 @@ public class Paddle : MonoBehaviour
     {
         if (Input.touchCount == 1)
         {
-            float limit_x = 0;
-            float limit_y = 0;
+
             //開始觸碰
             if (Input.touches[0].phase == TouchPhase.Began)
             {
-                GameObject.Find("ball").GetComponent<Ball>().enabled = true;
-
+                if (start)
+                {
+                    GameObject.Find("game_music").GetComponent<AudioSource>().Play();
+                    GameObject.Find("Main Camera").GetComponent<Game_Controller>().enabled = true;
+                    GameObject.Find("ball").GetComponent<Ball>().enabled = true;
+                    start = false;
+                }
                 //紀錄觸碰位置
                 m_screenPos = Input.touches[0].position;
-
-                limit_x = -gameObject.transform.right.x - limit_x;
-                limit_y = gameObject.transform.right.x + limit_y;
                 //手指移動
             }
             else if (Input.touches[0].phase == TouchPhase.Moved)
             {
-                gameObject.transform.position +=
-                    new Vector3(Mathf.Clamp(Input.touches[0].deltaPosition.x / 200, -limit_x, limit_y), 0);
+                if(gameObject.transform.position.x <1.6 && gameObject.transform.position.x >-1.6)
+                    gameObject.transform.position += new Vector3(Input.touches[0].deltaPosition.x / 300, 0);
             }
         }
 
@@ -51,6 +46,7 @@ public class Paddle : MonoBehaviour
                 GameObject.Find("game_music").GetComponent<AudioSource>().Play();
                 GameObject.Find("Main Camera").GetComponent<Game_Controller>().enabled = true;
                 GameObject.Find("ball").GetComponent<Ball>().enabled = true;
+
 
                 start = false;
             }
