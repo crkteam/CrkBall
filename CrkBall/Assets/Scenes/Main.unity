@@ -360,7 +360,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22400762, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -0.000015258789
+      value: -0.0000076293945
       objectReference: {fileID: 0}
     - target: {fileID: 22426080, guid: 67117722a812a2e46ab8cb8eafbf5f5e, type: 2}
       propertyPath: m_AnchorMin.y
@@ -5318,7 +5318,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 360805453}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 002e2f35235ba294792feda1d9e03eaa, type: 3}
   m_Name: 

@@ -12,7 +12,8 @@ public class StatusController : MonoBehaviour
     {
         _jsonPlayer = new JsonPlayer();
         int count = 0;
-        foreach (var value in _jsonPlayer.getBall())
+        int[] ball = _jsonPlayer.getBall();
+        foreach (var value in ball)
         {
             if (value == 2)
             {
@@ -21,7 +22,6 @@ public class StatusController : MonoBehaviour
 
             count++;
         }
-
         status_init(count);
     }
 
