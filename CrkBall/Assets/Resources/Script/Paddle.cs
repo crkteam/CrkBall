@@ -34,8 +34,9 @@ public class Paddle : MonoBehaviour
             }
             else if (Input.touches[0].phase == TouchPhase.Moved)
             {
-                if(gameObject.transform.position.x <1.6 && gameObject.transform.position.x >-1.6)
-                    gameObject.transform.position += new Vector3(Input.touches[0].deltaPosition.x / 300, 0);
+                double min = -1.6 - gameObject.transform.position.x;
+                double max =  1.6 - gameObject.transform.position.x;
+                gameObject.transform.position += new Vector3( Mathf.Clamp(Input.touches[0].deltaPosition.x / 300, (float) min, (float) max), 0);
             }
         }
 

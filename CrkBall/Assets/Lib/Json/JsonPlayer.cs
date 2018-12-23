@@ -8,8 +8,8 @@ public class JsonPlayer : BaseJson
     {
         player = new Player();
 
-        int[] buffer_ball = {1, 0, 0, 0, 0};
-        int[] buffer_music = {1, 0};
+        int[] buffer_ball = {2, 0, 0, 0, 0};
+        int[] buffer_music = {2, 0};
         
         if (!check("MyPlayer"))
             setAll(0,0,0,buffer_ball,buffer_music);

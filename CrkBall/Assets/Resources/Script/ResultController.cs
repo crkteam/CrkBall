@@ -11,7 +11,9 @@ public class ResultController
     {
         _jsonPlayer = new JsonPlayer();
         int point = int.Parse(GameObject.Find("Cash_text").GetComponent<TextMesh>().text);
-        
+        int total = _jsonPlayer.gettotal();
+        total += point;
+        _jsonPlayer.settotal(total);
         
         if(_jsonPlayer.gethighPoint() < point)
             _jsonPlayer.sethighPoint(point);
