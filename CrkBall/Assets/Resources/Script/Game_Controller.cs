@@ -62,7 +62,7 @@ public class Game_Controller : MonoBehaviour
     {
         resultController = new ResultController();
         death_background.SetActive(true);
-
+        GameObject.Find("Result_text").GetComponent<TextMesh>().text = cash.ToString();
         CancelInvoke("drop");
         GameObject.Find("ball").SetActive(false);
     }

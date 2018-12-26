@@ -58,7 +58,7 @@ public class Paddle : MonoBehaviour
 
             if (!block_x.GetComponentInChildren<BoxCollider2D>().OverlapPoint(
                 gameObject.transform.position + (gameObject.transform.right / 2) * gameObject.transform.localScale.x))
-                gameObject.transform.position += new Vector3(0.05f, 0);
+                gameObject.transform.position += new Vector3(0.1f, 0);
         }
 
         if (Input.GetKey(KeyCode.LeftArrow))
@@ -78,7 +78,7 @@ public class Paddle : MonoBehaviour
 
             if (!block_x.GetComponentInChildren<BoxCollider2D>().OverlapPoint(
                 gameObject.transform.position - (gameObject.transform.right / 2) * gameObject.transform.localScale.x))
-                gameObject.transform.position += new Vector3(-0.05f, 0);
+                gameObject.transform.position += new Vector3(-0.1f, 0);
         }
     }
 }

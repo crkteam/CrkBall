@@ -46,7 +46,7 @@ public class CreateImage : MonoBehaviour
         {
             if (temp[i] == 2)
             {
-                Debug.Log(i);
+
                 temp[i] = 1;
             }
         }

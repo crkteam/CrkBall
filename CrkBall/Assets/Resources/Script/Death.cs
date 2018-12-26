@@ -15,7 +15,6 @@ public class Death : MonoBehaviour
         GameObject.Find("Light").GetComponent<Animator>().transform.position = other.transform.position;
         GameObject.Find("Light").GetComponent<Animator>().SetTrigger("Light");
         GameObject.Find("game_music").GetComponent<AudioSource>().Stop();
-
         Invoke("wait",1);
     }
 

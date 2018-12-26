@@ -1,0 +1,37 @@
+{
+  "client": [
+    {
+      "services": {
+        "appinvite_service": {
+          "status": 0
+        }, 
+        "analytics_service": {
+          "status": 0
+        }
+      }, 
+      "oauth_client": [
+        {
+          "client_id": "583852058245-qpcv4vsa5gt150h5cebcitmvidenh0mm.apps.googleusercontent.com"
+        }
+      ], 
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd8iT7kJeQ1JPCSa6i_SEe5wBK0LCDAmE"
+        }
+      ], 
+      "client_info": {
+        "mobilesdk_app_id": "1:583852058245:ios:5236980122f52e84", 
+        "android_client_info": {
+          "package_name": "com.crkteam.crkball"
+        }
+      }
+    }
+  ], 
+  "configuration_version": "1", 
+  "project_info": {
+    "storage_bucket": "crkball-49368.appspot.com", 
+    "project_id": "crkball-49368", 
+    "firebase_url": "https://crkball-49368.firebaseio.com", 
+    "project_number": "583852058245"
+  }
+}
