@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class LineController : MonoBehaviour {
 
-    public GameObject block,canvas,line;
+    public GameObject block,line,block_holder;
     
 
 	// Use this for initialization
 	void Start () {
         createLIne();
-	}
+        createLIne();
+
+    }
 
     void createLIne() {
         int[] random = getRandom();
         int width = 0;
         GameObject b_line = Instantiate(line);
-        b_line.transform.parent = canvas.transform;
+        b_line.transform.parent = block_holder.transform;
+
 
         for (int i = 0; i < 7; i++)
         {
@@ -31,6 +34,8 @@ public class LineController : MonoBehaviour {
 
             width += 180;
         }
+
+        block_holder.GetComponent<BlockHolder>().addLine(b_line);
     }
 
     GameObject getBlock(int i) {
