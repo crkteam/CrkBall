@@ -5,7 +5,7 @@ using UnityEngine;
 public class BlockHolder : MonoBehaviour{
     
     [SerializeField]
-    GameObject[] lines;
+    public GameObject[] lines;
     
 
     private void Awake()
@@ -29,3 +29,4 @@ public class BlockHolder : MonoBehaviour{
 
 
 }
+ 
