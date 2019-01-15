@@ -5,8 +5,9 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     [SerializeField] Vector2 v;
-
-    public int ballAttack;
+    
+    [SerializeField]
+    private int ballAttack;
     public GameController gameController;
     
     // Use this for initialization
@@ -14,6 +15,11 @@ public class Ball : MonoBehaviour
     {
         ballAttack = 1;
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(6,3);
+    }
+
+    public void addBallAttack()
+    {
+        ballAttack++;
     }
 
     // Update is called once per frame

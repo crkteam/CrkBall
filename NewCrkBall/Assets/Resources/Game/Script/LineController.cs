@@ -21,11 +21,7 @@ public class LineController : MonoBehaviour
             if (Case != 0)
             {
                 GameObject b_block = getBlock(Case, b_line.transform);
-                b_line.GetComponent<Line>().blocks[i] = b_block;
-                
-                if (Case == 1)
-                    b_block.GetComponent<Block>().initBlockHP(setBlockHP());
-                
+                b_line.GetComponent<Line>().blocks[i] = b_block;         
                 b_block.transform.position += new Vector3(width, 0, 0);
             }
 
@@ -49,9 +45,19 @@ public class LineController : MonoBehaviour
         {
             case 1:
                 b_block = Instantiate(block, father);
+                b_block.GetComponent<Block>().initBlockHP(setBlockHP());
                 break;
             case 2:
-                b_block = Instantiate(attack, father);
+                if (Random.value > 0.5f)
+                {
+                    b_block = Instantiate(attack, father);
+                }
+                else
+                {
+                    b_block = Instantiate(block, father);
+                    b_block.GetComponent<Block>().initBlockHP(setBlockHP());
+                }
+
                 break;
             default:
                 return null;
