@@ -14,6 +14,7 @@
               <e p="Block.cs" t="Include" />
               <e p="BlockHolder.cs" t="Include" />
               <e p="Board.cs" t="Include" />
+              <e p="Burst.cs" t="Include" />
               <e p="GameController.cs" t="Include" />
               <e p="Line.cs" t="Include" />
               <e p="LineController.cs" t="Include" />

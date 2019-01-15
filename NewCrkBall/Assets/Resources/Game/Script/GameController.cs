@@ -5,13 +5,14 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    //scipt
     public LineController lineController;
     public BlockHolder blockHolder;
+
     public TextMesh pointUI;
-    // script
-    [SerializeField]
-    private int round,point;
+
     // attribute
+    [SerializeField] private int round, point;
 
     // Use this for initialization
     void Start()
@@ -23,14 +24,43 @@ public class GameController : MonoBehaviour
     void init()
     {
         round = 0;
+        GameObject.Find("Point").GetComponent<MeshRenderer>().sortingLayerName = "2";
         nextRound();
+    }
+
+    public void stopNextRound()
+    {
+        CancelInvoke("nextRound");
+        InvokeRepeating("nextRound", 3, 5f);
     }
 
     public void setPoint(int point)
     {
         this.point += point;
         pointUI.GetComponent<TextMesh>().text = this.point.ToString();
-        
+        pointUI.transform.localScale = new Vector3(1.2f, 1.2f);
+        StartCoroutine(pointScale());
+    }
+
+    IEnumerator pointScale()
+    {
+        int count = 0;
+
+        while (true)
+        {
+            if (count > 10)
+            {
+                pointUI.transform.localScale = new Vector3(0.35f, 0.35f);
+                break;
+            }
+
+
+            pointUI.transform.localScale -= new Vector3(0.07f, 0.07f);
+
+
+            count++;
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 
     void nextRound()
