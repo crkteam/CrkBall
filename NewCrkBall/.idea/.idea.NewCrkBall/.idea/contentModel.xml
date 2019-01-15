@@ -9,6 +9,7 @@
         <e p="Resources" t="Include">
           <e p="Game" t="Include">
             <e p="Script" t="Include">
+              <e p="Attack.cs" t="Include" />
               <e p="Ball.cs" t="Include" />
               <e p="Block.cs" t="Include" />
               <e p="BlockHolder.cs" t="Include" />
@@ -16,6 +17,11 @@
               <e p="GameController.cs" t="Include" />
               <e p="Line.cs" t="Include" />
               <e p="LineController.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Lobby" t="Include">
+            <e p="Script" t="Include">
+              <e p="ButtonController.cs" t="Include" />
             </e>
           </e>
         </e>

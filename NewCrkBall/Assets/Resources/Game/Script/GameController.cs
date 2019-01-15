@@ -7,13 +7,16 @@ public class GameController : MonoBehaviour
 {
     public LineController lineController;
     public BlockHolder blockHolder;
-    private int round;
+    public TextMesh pointUI;
+    // script
+    [SerializeField]
+    private int round,point;
+    // attribute
 
     // Use this for initialization
     void Start()
     {
         init();
-        
         InvokeRepeating("nextRound", 5, 5f);
     }
 
@@ -21,6 +24,13 @@ public class GameController : MonoBehaviour
     {
         round = 0;
         nextRound();
+    }
+
+    public void setPoint(int point)
+    {
+        this.point += point;
+        pointUI.GetComponent<TextMesh>().text = this.point.ToString();
+        
     }
 
     void nextRound()
@@ -38,6 +48,7 @@ public class GameController : MonoBehaviour
 
     public void gameover()
     {
+        CancelInvoke("nextRound");
         Debug.Log("death");
     }
 }
