@@ -10,8 +10,8 @@ public class LineController : MonoBehaviour
     public void createLIne()
     {
         int[] random = getRandom();
-        int width = 0;
-        GameObject b_line = Instantiate(line, block_holder.transform, true);
+        float width = 0;
+        GameObject b_line = Instantiate(line, block_holder.transform);
 
 
         for (int i = 0; i < 7; i++)
@@ -26,10 +26,9 @@ public class LineController : MonoBehaviour
                 b_block.transform.position += new Vector3(width, 0, 0);
             }
 
-            width += 180; // 每隔要移動
+            width += 0.725f; // 每隔要移動
         }
 
-        b_line.transform.localPosition = new Vector3(-700, 870);
         block_holder.GetComponent<BlockHolder>().addLine(b_line);
     }
 

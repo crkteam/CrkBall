@@ -12,8 +12,9 @@ public class GameController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        init();     
-        InvokeRepeating("nextRound",5,5f);
+        init();
+        
+        InvokeRepeating("nextRound", 5, 5f);
     }
 
     void init()
@@ -27,14 +28,16 @@ public class GameController : MonoBehaviour
         round++;
         foreach (var gameObject in blockHolder.lines)
         {
-            if(gameObject!=null)
-                gameObject.transform.position += new Vector3(0, -180);
+            if (gameObject != null)
+                gameObject.transform.position += new Vector3(0, -0.725f);
         }
- 
+
         lineController.blockHP = round;
         lineController.createLIne();
-        
     }
-    
-    
+
+    public void gameover()
+    {
+        Debug.Log("death");
+    }
 }

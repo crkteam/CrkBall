@@ -19,7 +19,6 @@ public class Line : MonoBehaviour
             if (VARIABLE == null)
             {
                 check--;
-                Debug.Log(check);
             }
         }
 

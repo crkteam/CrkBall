@@ -10,13 +10,14 @@ public class Block : MonoBehaviour
 
     void Start()
     {
-        gameObject.GetComponentInChildren<Text>().text = blockHP.ToString();
+        gameObject.GetComponentInChildren<MeshRenderer>().sortingLayerName = "3" ;
+        gameObject.GetComponentInChildren<TextMesh>().text = blockHP.ToString();
     }
 
     public void hit(int attack)
     {
         blockHP -= attack;
-        gameObject.GetComponentInChildren<Text>().text = blockHP.ToString();
+        gameObject.GetComponentInChildren<TextMesh>().text = blockHP.ToString();
 
         if (blockHP <= 0)
         {

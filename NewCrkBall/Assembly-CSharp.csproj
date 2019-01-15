@@ -68,6 +68,7 @@
     <Compile Include="Assets\Resources\Game\Script\Ball.cs" />
     <Compile Include="Assets\Resources\Game\Script\Block.cs" />
     <Compile Include="Assets\Resources\Game\Script\BlockHolder.cs" />
+    <Compile Include="Assets\Resources\Game\Script\Board.cs" />
     <Compile Include="Assets\Resources\Game\Script\GameController.cs" />
     <Compile Include="Assets\Resources\Game\Script\Line.cs" />
     <Compile Include="Assets\Resources\Game\Script\LineController.cs" />
