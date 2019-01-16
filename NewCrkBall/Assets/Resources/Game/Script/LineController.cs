@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LineController : MonoBehaviour
 {
-    public GameObject block, attack, line, block_holder;
+    public GameObject block, attack, line, block_holder,burst;
     public int blockHP = 0;
 
     public void createLIne()
@@ -57,7 +57,17 @@ public class LineController : MonoBehaviour
                     b_block = Instantiate(block, father);
                     b_block.GetComponent<Block>().initBlockHP(setBlockHP());
                 }
-
+                break;
+            case 3:
+                if (Random.value > 0.75f)
+                {
+                    b_block = Instantiate(burst, father);
+                }
+                else
+                {
+                    b_block = Instantiate(block, father);
+                    b_block.GetComponent<Block>().initBlockHP(setBlockHP());
+                }
                 break;
             default:
                 return null;
@@ -72,7 +82,7 @@ public class LineController : MonoBehaviour
 
         for (int i = 0; i < 7; i++)
         {
-            random[i] = Random.Range(0, 3);
+            random[i] = Random.Range(0, 4);
         }
 
         return random;

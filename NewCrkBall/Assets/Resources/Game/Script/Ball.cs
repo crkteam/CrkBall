@@ -14,7 +14,7 @@ public class Ball : MonoBehaviour
     void Start()
     {
         ballAttack = 1;
-        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(6,3);
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(8,4);
     }
 
     public void addBallAttack()

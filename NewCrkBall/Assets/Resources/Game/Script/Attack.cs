@@ -7,7 +7,7 @@ public class Attack : MonoBehaviour {
     {
         if (other.gameObject.name.Equals("Ball")) {
             GameObject.Find("Ball").GetComponent<Ball>().addBallAttack();
-            other.gameObject.GetComponentsInChildren<ParticleSystem>()[3].Play();
+            other.gameObject.GetComponentsInChildren<ParticleSystem>()[1].Play();
             Destroy(gameObject);
         }
     } 

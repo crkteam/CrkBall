@@ -8,8 +8,8 @@ public class GameController : MonoBehaviour
     //scipt
     public LineController lineController;
     public BlockHolder blockHolder;
-
-    public TextMesh pointUI;
+    
+    public TextMesh pointUI,levelUI;
 
     // attribute
     [SerializeField] private int round, point;
@@ -66,6 +66,7 @@ public class GameController : MonoBehaviour
     void nextRound()
     {
         round++;
+        levelUI.text = round.ToString();
         foreach (var gameObject in blockHolder.lines)
         {
             if (gameObject != null)

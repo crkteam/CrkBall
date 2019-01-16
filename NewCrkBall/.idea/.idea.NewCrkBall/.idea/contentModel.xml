@@ -18,6 +18,9 @@
               <e p="GameController.cs" t="Include" />
               <e p="Line.cs" t="Include" />
               <e p="LineController.cs" t="Include" />
+              <e p="skill" t="Include">
+                <e p="skill_Burst.cs" t="Include" />
+              </e>
             </e>
           </e>
           <e p="Lobby" t="Include">

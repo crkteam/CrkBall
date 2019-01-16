@@ -24,6 +24,11 @@ public class Block : MonoBehaviour
 
     public void hit(int attack)
     {
+        Color full = gameObject.GetComponentsInChildren<SpriteRenderer>()[1].color;
+        full.a = 255;
+        gameObject.GetComponentsInChildren<SpriteRenderer>()[1].color = full;
+        Invoke("flash",0.2f);
+        
         blockHP -= attack;
         gameObject.GetComponentInChildren<TextMesh>().text = blockHP.ToString();
 
@@ -31,6 +36,13 @@ public class Block : MonoBehaviour
         {
             dead();
         }
+    }
+
+    private void flash()
+    {
+        Color current = gameObject.GetComponentsInChildren<SpriteRenderer>()[1].color;
+        current.a = 0;
+        gameObject.GetComponentsInChildren<SpriteRenderer>()[1].color = current;
     }
 
     void dead()
