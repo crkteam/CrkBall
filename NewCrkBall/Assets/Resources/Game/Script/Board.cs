@@ -28,12 +28,12 @@ public class Board : MonoBehaviour
     {
         if (other.gameObject.name.Equals("Right_Block"))
         {
-            gameObject.transform.position = new Vector3(1.49f, -4.43f, 0);
+            gameObject.transform.position = new Vector3(1.532f, -4.43f, 0);
         }
 
         if (other.gameObject.name.Equals("Left_Block"))
         {
-            gameObject.transform.position = new Vector3(-1.485f, -4.43f, 0);
+            gameObject.transform.position = new Vector3(-1.57f, -4.43f, 0);
         }
     }
 }

@@ -26,6 +26,9 @@
             </e>
           </e>
         </e>
+        <e p="Shader" t="Include">
+          <e p="Additive_Base.shader" t="Include" />
+        </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="NewCrkBall.sln" t="IncludeFlat" />
