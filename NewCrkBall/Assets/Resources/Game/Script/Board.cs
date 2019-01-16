@@ -14,12 +14,12 @@ public class Board : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            gameObject.transform.position += new Vector3(-0.02f, 0, 0);
+            gameObject.transform.position += new Vector3(-0.05f, 0, 0);
         }
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            gameObject.transform.position += new Vector3(0.02f, 0, 0);
+            gameObject.transform.position += new Vector3(0.05f, 0, 0);
         }
     }
 
