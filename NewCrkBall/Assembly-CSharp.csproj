@@ -65,16 +65,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Resources\Game\Script\Attack.cs" />
-    <Compile Include="Assets\Resources\Game\Script\Ball.cs" />
-    <Compile Include="Assets\Resources\Game\Script\Block.cs" />
-    <Compile Include="Assets\Resources\Game\Script\BlockHolder.cs" />
-    <Compile Include="Assets\Resources\Game\Script\Board.cs" />
-    <Compile Include="Assets\Resources\Game\Script\Burst.cs" />
-    <Compile Include="Assets\Resources\Game\Script\GameController.cs" />
-    <Compile Include="Assets\Resources\Game\Script\Line.cs" />
-    <Compile Include="Assets\Resources\Game\Script\LineController.cs" />
+    <Compile Include="Assets\Resources\Game\Script\Game\Attack.cs" />
+    <Compile Include="Assets\Resources\Game\Script\Game\Ball.cs" />
+    <Compile Include="Assets\Resources\Game\Script\Game\Block.cs" />
+    <Compile Include="Assets\Resources\Game\Script\Game\BlockHolder.cs" />
+    <Compile Include="Assets\Resources\Game\Script\Game\Board.cs" />
+    <Compile Include="Assets\Resources\Game\Script\Game\Burst.cs" />
+    <Compile Include="Assets\Resources\Game\Script\Game\GameController.cs" />
+    <Compile Include="Assets\Resources\Game\Script\Game\Line.cs" />
+    <Compile Include="Assets\Resources\Game\Script\Game\LineController.cs" />
     <Compile Include="Assets\Resources\Game\Script\Skill\Skill_burst.cs" />
+    <Compile Include="Assets\Resources\Game\Script\UI\Pause.cs" />
     <Compile Include="Assets\Resources\Lobby\Script\ButtonController.cs" />
     <None Include="Assets\Shader\Additive_Base.shader" />
     <Reference Include="UnityEditor.StandardEvents">

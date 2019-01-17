@@ -6,11 +6,16 @@ public class Skill_burst : MonoBehaviour {
 	
 	[SerializeField]
 	private GameObject ball, board, gameController;
+	[SerializeField]
+	private Material invert;
 
+	[SerializeField] private LineController lineController;
+	
 	private Vector2 currentSpeed;
 	private int timer;
 	public void use()
 	{
+//		blockHolder.destroyBurst();
 		setBall();
 	}
 
@@ -19,11 +24,11 @@ public class Skill_burst : MonoBehaviour {
 		//處理ball
 		timer = 0;
 		currentSpeed = ball.GetComponent<Rigidbody2D>().velocity;
-		ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+		ball.GetComponent<Rigidbody2D>().velocity = new Vector3(0.15f,0.15f);
 		//處理block
 		gameController.GetComponent<GameController>().stopNextRound();
 		//處理board
-        
+		ball.GetComponentsInChildren<ParticleSystem>()[0].Play();
 		InvokeRepeating("quickBall", 2f,1f);
 
 	}
@@ -32,7 +37,9 @@ public class Skill_burst : MonoBehaviour {
 	{
 		if (timer == 0)
 		{
-			ball.GetComponent<Rigidbody2D>().velocity = currentSpeed * 1.5f;
+			invert.SetFloat("_InvertColors",1);
+			ball.GetComponentsInChildren<ParticleSystem>()[2].Play();
+			ball.GetComponent<Rigidbody2D>().velocity = currentSpeed * 3f;
 			board.transform.localScale = new Vector3(10,1);
 		}
 		else
@@ -40,9 +47,11 @@ public class Skill_burst : MonoBehaviour {
 			if (timer > 5)
 			{
 				timer = 0;
+				invert.SetFloat("_InvertColors",0);
 				Vector2 doubleSpeed = ball.GetComponent<Rigidbody2D>().velocity;
-				ball.GetComponent<Rigidbody2D>().velocity = doubleSpeed / 1.5f;
-				board.transform.localScale = new Vector3(2,1);
+				ball.GetComponent<Rigidbody2D>().velocity = doubleSpeed / 3f;
+				board.transform.localScale = new Vector3(0.6f,0.6f);
+				lineController.burstCheck = true;
 				CancelInvoke("quickBall");
 			}  
 		}
