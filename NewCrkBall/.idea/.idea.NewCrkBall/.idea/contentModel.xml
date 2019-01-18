@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Tsou\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Tsou\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_NewCrkBall.774384655.00" t="ExcludeRecursive" />
-    <e p="D:\Crk\CrkBall\NewCrkBall" t="IncludeRecursive">
+    <e p="C:\Users\CrkJK\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\CrkJK\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_NewCrkBall.927343507.00" t="ExcludeRecursive" />
+    <e p="C:\Users\CrkJK\Desktop\Git\CrkBall\NewCrkBall" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -69,6 +69,7 @@
               </e>
               <e p="UI" t="Include">
                 <e p="Pause.cs" t="Include" />
+                <e p="Pause_Button.cs" t="Include" />
               </e>
             </e>
           </e>

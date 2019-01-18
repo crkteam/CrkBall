@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Pause : MonoBehaviour
 {
-    [SerializeField] private SpriteRenderer background, centerImage;
+    [SerializeField] private SpriteRenderer background;
+    [SerializeField] private GameObject UI;
     [SerializeField] private TextMesh point;
 
     private void OnMouseDown()
@@ -12,6 +13,8 @@ public class Pause : MonoBehaviour
         Color buffer = background.color;
         buffer.a = 0.5f;
         background.color = buffer;
+        point.GetComponent<MeshRenderer>().sortingLayerName = "3";
+        UI.SetActive(true);
         Time.timeScale = 0;
     }
 }
