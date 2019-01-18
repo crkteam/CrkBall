@@ -39,7 +39,12 @@ public class Ball : MonoBehaviour
         
         if (other.gameObject.tag.Equals("Block"))
         {
-            other.gameObject.GetComponent<Block>().hit(ballAttack);    
+            other.gameObject.GetComponent<Block>().hit(ballAttack);            
+        }
+        
+        if (other.gameObject.name.Equals("Board"))
+        {
+            GameObject.Find("Connect").GetComponent<AudioSource>().Play();
         }
     }
 }

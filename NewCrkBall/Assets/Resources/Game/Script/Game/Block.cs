@@ -24,6 +24,7 @@ public class Block : MonoBehaviour
     public void hit(int attack)
     {
         Color full = gameObject.GetComponentsInChildren<SpriteRenderer>()[1].color;
+        GameObject.Find("Hit").GetComponent<AudioSource>().Play();
         full.a = 255;
         gameObject.GetComponentsInChildren<SpriteRenderer>()[1].color = full;
         Invoke("flash", 0.2f);
@@ -47,6 +48,7 @@ public class Block : MonoBehaviour
     void dead()
     {
         GameObject.Find("Main Camera").GetComponent<GameController>().setPoint(r_blockHP);
+        GameObject.Find("Crack").GetComponent<AudioSource>().Play();
         gameObject.GetComponentInParent<Line>().checkDestroy();
         gameObject.AddComponent<Explodable>();
         gameObject.GetComponent<Explodable>().explode();

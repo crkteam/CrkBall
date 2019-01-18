@@ -37,4 +37,6 @@ public class Board : MonoBehaviour
             gameObject.transform.position = new Vector3(-1.57f, -4.43f, 0);
         }
     }
+    
+    
 }
