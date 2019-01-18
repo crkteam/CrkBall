@@ -808,7 +808,7 @@ Prefab:
     - target: {fileID: 198725636496620004, guid: 9a8f07cf0954fc24e8ddc1522eafc4d8,
         type: 2}
       propertyPath: lengthInSec
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 198725636496620004, guid: 9a8f07cf0954fc24e8ddc1522eafc4d8,
         type: 2}
@@ -838,7 +838,7 @@ Prefab:
     - target: {fileID: 198690358857187496, guid: 9a8f07cf0954fc24e8ddc1522eafc4d8,
         type: 2}
       propertyPath: lengthInSec
-      value: 2
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 198690358857187496, guid: 9a8f07cf0954fc24e8ddc1522eafc4d8,
         type: 2}
@@ -857,22 +857,22 @@ Prefab:
     - target: {fileID: 198690358857187496, guid: 9a8f07cf0954fc24e8ddc1522eafc4d8,
         type: 2}
       propertyPath: InitialModule.startSpeed.minScalar
-      value: 15
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 198690358857187496, guid: 9a8f07cf0954fc24e8ddc1522eafc4d8,
         type: 2}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 20
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 198690358857187496, guid: 9a8f07cf0954fc24e8ddc1522eafc4d8,
         type: 2}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 0.5
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 198690358857187496, guid: 9a8f07cf0954fc24e8ddc1522eafc4d8,
         type: 2}
       propertyPath: InitialModule.startLifetime.minScalar
-      value: 0.1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4944968152052346, guid: 9a8f07cf0954fc24e8ddc1522eafc4d8, type: 2}
       propertyPath: m_LocalScale.x
@@ -904,7 +904,32 @@ Prefab:
     - target: {fileID: 198725636496620004, guid: 9a8f07cf0954fc24e8ddc1522eafc4d8,
         type: 2}
       propertyPath: InitialModule.startSize.scalar
-      value: 10
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 199662449732962970, guid: 9a8f07cf0954fc24e8ddc1522eafc4d8,
+        type: 2}
+      propertyPath: m_RenderMode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 199662449732962970, guid: 9a8f07cf0954fc24e8ddc1522eafc4d8,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 198690358857187496, guid: 9a8f07cf0954fc24e8ddc1522eafc4d8,
+        type: 2}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 198690358857187496, guid: 9a8f07cf0954fc24e8ddc1522eafc4d8,
+        type: 2}
+      propertyPath: InitialModule.maxNumParticles
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 198690358857187496, guid: 9a8f07cf0954fc24e8ddc1522eafc4d8,
+        type: 2}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a8f07cf0954fc24e8ddc1522eafc4d8, type: 2}
@@ -2330,7 +2355,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 1
-      scalar: 7
+      scalar: 9
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -7189,7 +7214,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 45
+      scalar: 40
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -7356,7 +7381,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 1
-      scalar: 4
+      scalar: 6
       minScalar: 1
       maxCurve:
         serializedVersion: 2
