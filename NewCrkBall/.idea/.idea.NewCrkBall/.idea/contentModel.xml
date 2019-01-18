@@ -64,6 +64,10 @@
                 <e p="Line.cs" t="Include" />
                 <e p="LineController.cs" t="Include" />
               </e>
+              <e p="Result" t="Include">
+                <e p="Result.cs" t="Include" />
+                <e p="Result_Button.cs" t="Include" />
+              </e>
               <e p="skill" t="Include">
                 <e p="skill_Burst.cs" t="Include" />
               </e>

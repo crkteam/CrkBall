@@ -8,6 +8,7 @@ public class GameController : MonoBehaviour
     //scipt
     public LineController lineController;
     public BlockHolder blockHolder;
+    public Result result;
     
     public TextMesh pointUI,levelUI;
 
@@ -40,6 +41,13 @@ public class GameController : MonoBehaviour
         pointUI.GetComponent<TextMesh>().text = this.point.ToString();
         pointUI.transform.localScale = new Vector3(1.2f, 1.2f);
         StartCoroutine(pointScale());
+    }
+
+    public int[] getResult()
+    {
+        int[] result = {round, point};
+        
+        return result;
     }
 
     IEnumerator pointScale()
@@ -79,6 +87,7 @@ public class GameController : MonoBehaviour
 
     public void gameover()
     {
+        result.compute();
         CancelInvoke("nextRound");
         Debug.Log("death");
     }
