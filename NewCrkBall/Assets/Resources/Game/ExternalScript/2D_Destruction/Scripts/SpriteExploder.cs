@@ -290,8 +290,11 @@ public static class SpriteExploder {
         Rigidbody2D rigidbody = piece.AddComponent<Rigidbody2D>();
         rigidbody.velocity = new Vector2(Random.Range(-1.5f,1.5f),Random.Range(.5f,3));
         piece.GetComponent<PolygonCollider2D>().isTrigger = true;
+        Object.Destroy(piece, 2f);
         return piece;
+       
     }
+    
 
     /// <summary>
     /// generates a list of points from a box collider
