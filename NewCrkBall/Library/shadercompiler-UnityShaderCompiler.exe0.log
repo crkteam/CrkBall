@@ -1,7 +1,4 @@
 Base path: C:/Users/Tsou/Editor/Data
 Cmd: initializeCompiler
-Cmd: preprocess
-  insize=4271 outsize=2615 ok=1
-Cmd: preprocess
-  insize=1303 outsize=479 ok=1
+Cmd: initializeCompiler
 Cmd: initializeCompiler
