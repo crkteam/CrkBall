@@ -46,5 +46,6 @@ public class Ball : MonoBehaviour
         {
             GameObject.Find("Connect").GetComponent<AudioSource>().Play();
         }
+        
     }
 }

@@ -15,11 +15,13 @@ public class GameController : MonoBehaviour
     // attribute
     [SerializeField] private int round, point;
 
+    [Header("TitleBar_image")]public GameObject TitleBar_Level;
     // Use this for initialization
     void Start()
     {
         init();
         InvokeRepeating("nextRound", 5, 5f);
+        InvokeRepeating("nextRoundAnimation", 5, 5f);
     }
 
     void init()
@@ -27,6 +29,7 @@ public class GameController : MonoBehaviour
         round = 0;
         GameObject.Find("Point").GetComponent<MeshRenderer>().sortingLayerName = "2";
         nextRound();
+        
     }
 
     public void stopNextRound()
@@ -71,6 +74,10 @@ public class GameController : MonoBehaviour
         }
     }
 
+    void nextRoundAnimation()
+    {
+     TitleBar_Level.GetComponent<Animator>().SetTrigger("Whirl");   
+    }
     void nextRound()
     {
         round++;

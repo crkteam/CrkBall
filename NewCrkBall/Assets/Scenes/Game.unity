@@ -729,6 +729,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &353881230 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1877470687125280, guid: b429d2b5378193a4f999cbf03ed1bb7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1914766056}
 --- !u!1 &379671892
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,6 +745,7 @@ GameObject:
   - component: {fileID: 379671895}
   - component: {fileID: 379671894}
   - component: {fileID: 379671896}
+  - component: {fileID: 379671897}
   m_Layer: 0
   m_Name: Right_Block
   m_TagString: Untagged
@@ -848,6 +854,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &379671897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 379671892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44334ea5eeff54dfbb95f4d46db55399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particle: {fileID: 353881230}
 --- !u!1 &421697166
 GameObject:
   m_ObjectHideFlags: 0
@@ -16521,6 +16539,7 @@ MonoBehaviour:
   levelUI: {fileID: 421697168}
   round: 0
   point: 0
+  TitleBar_Level: {fileID: 1833443253}
 --- !u!114 &1242613848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17135,6 +17154,11 @@ Transform:
   m_Father: {fileID: 1631114242}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1674889797 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1054669099565402, guid: e2448fd20c3419b4088d64ade3c0932f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1941936789}
 --- !u!1 &1733191267
 GameObject:
   m_ObjectHideFlags: 0
@@ -17564,7 +17588,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4704924889317122, guid: b429d2b5378193a4f999cbf03ed1bb7f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1281.69
+      value: -1287.23
       objectReference: {fileID: 0}
     - target: {fileID: 4704924889317122, guid: b429d2b5378193a4f999cbf03ed1bb7f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -17664,6 +17688,11 @@ Prefab:
     - target: {fileID: 198842612487224064, guid: b429d2b5378193a4f999cbf03ed1bb7f,
         type: 2}
       propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198842612487224064, guid: b429d2b5378193a4f999cbf03ed1bb7f,
+        type: 2}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -17768,7 +17797,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4218999023795174, guid: e2448fd20c3419b4088d64ade3c0932f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1278.9
+      value: -1286.7
       objectReference: {fileID: 0}
     - target: {fileID: 4218999023795174, guid: e2448fd20c3419b4088d64ade3c0932f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -17856,6 +17885,11 @@ Prefab:
     - target: {fileID: 198286176058781046, guid: e2448fd20c3419b4088d64ade3c0932f,
         type: 2}
       propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198286176058781046, guid: e2448fd20c3419b4088d64ade3c0932f,
+        type: 2}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -17983,6 +18017,7 @@ GameObject:
   - component: {fileID: 1997333175}
   - component: {fileID: 1997333174}
   - component: {fileID: 1997333176}
+  - component: {fileID: 1997333177}
   m_Layer: 0
   m_Name: Left_Block
   m_TagString: Untagged
@@ -18091,6 +18126,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1997333177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1997333172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44334ea5eeff54dfbb95f4d46db55399, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particle: {fileID: 1674889797}
 --- !u!1 &2007638492
 GameObject:
   m_ObjectHideFlags: 0
