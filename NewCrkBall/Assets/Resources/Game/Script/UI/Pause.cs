@@ -13,6 +13,7 @@ public class Pause : MonoBehaviour
         Color buffer = background.color;
         buffer.a = 0.5f;
         background.color = buffer;
+        gameObject.GetComponent<Animator>().SetTrigger("Pause");
         point.GetComponent<MeshRenderer>().sortingLayerName = "3";
         UI.SetActive(true);
         Time.timeScale = 0;

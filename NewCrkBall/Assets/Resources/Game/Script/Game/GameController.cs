@@ -21,7 +21,7 @@ public class GameController : MonoBehaviour
     {
         init();
         InvokeRepeating("nextRound", 5, 5f);
-        InvokeRepeating("nextRoundAnimation", 5, 5f);
+        Invoke("nextRoundAnimation",4.5f);
     }
 
     void init()
@@ -87,7 +87,7 @@ public class GameController : MonoBehaviour
             if (gameObject != null)
                 gameObject.transform.position += new Vector3(0, -0.7f);
         }
-
+Invoke("nextRoundAnimation",4.5f);
         lineController.blockHP = round;
         lineController.createLIne();
     }

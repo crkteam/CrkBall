@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Result_Button : MonoBehaviour {
     private void OnMouseDown()
     {
+        
         if (gameObject.name.Equals("Result_Home"))
         {
             SceneManager.LoadScene("Lobby");
