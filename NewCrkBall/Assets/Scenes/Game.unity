@@ -1123,17 +1123,17 @@ Prefab:
     - target: {fileID: 198916257812397866, guid: 026fa422ccbfcca4988ad103237ea2d2,
         type: 2}
       propertyPath: InitialModule.startLifetime.minScalar
-      value: 3.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 198916257812397866, guid: 026fa422ccbfcca4988ad103237ea2d2,
         type: 2}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 3.8
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 198916257812397866, guid: 026fa422ccbfcca4988ad103237ea2d2,
         type: 2}
       propertyPath: InitialModule.startSpeed.minScalar
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 198916257812397866, guid: 026fa422ccbfcca4988ad103237ea2d2,
         type: 2}
@@ -1364,7 +1364,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 24d20215c05729d4f84c57980fec0057, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -17466,7 +17466,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1820952164
 Transform:
   m_ObjectHideFlags: 0
@@ -17520,7 +17520,7 @@ SpriteRenderer:
   m_SortingLayerID: 1733735771
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6a0481fd9ee5b644197ac93a424fa96b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c4c9c6568adb30146bc9e6bfc491b019, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
