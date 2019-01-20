@@ -24,6 +24,17 @@ public class Burst_music : MonoBehaviour
 
     private void pitchUp()
     {
-        main.pitch -= 0.01f;
+        if (main.pitch > 1.5f)
+        {
+            CancelInvoke("pitchUp");
+            Invoke("normalPitch", 6.5f);
+        }
+
+        main.pitch += 0.01f;
+    }
+
+    private void normalPitch()
+    {
+        main.pitch = 1;
     }
 }
