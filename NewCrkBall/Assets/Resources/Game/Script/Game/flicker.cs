@@ -14,9 +14,8 @@ public class flicker : MonoBehaviour
     void Start()
     {
         GameControll = GameObject.Find("Game");
-        Destroy(gameObject, 4f);
+        Destroy(gameObject, 5f);
         audio = GameControll.GetComponent<AudioSource>();
-        // Use this for initialization
     }
 
     // Update is called once per frame
@@ -31,9 +30,9 @@ public class flicker : MonoBehaviour
         gameObject.transform.localScale = new Vector3(temp, temp, gameObject.transform.localScale.z);
 
         temp = 0;
-        Color Color = gameObject.GetComponent<SpriteRenderer>().color;
-        Color.a -= 0.005f;
-        gameObject.GetComponent<SpriteRenderer>().color = Color;
+        Color color = gameObject.GetComponent<SpriteRenderer>().color;
+        color.a -= 0.005f;
+        gameObject.GetComponent<SpriteRenderer>().color = color;
         gameObject.transform.position += Vector3.up * Time.deltaTime*1.5f;
     }
 }   

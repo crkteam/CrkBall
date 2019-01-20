@@ -30,6 +30,7 @@ public class Board : MonoBehaviour
         if (other.gameObject.name.Equals("Left_Board"))
         {
             gameObject.transform.position = new Vector3(1.532f, -4.43f, 0);
+            
         }
 
         if (other.gameObject.name.Equals("Right_Board"))

@@ -9,6 +9,8 @@ public class Skill_burst : MonoBehaviour {
 	[SerializeField]
 	private Material invert;
 
+	public Burst_music burstMusic;
+	
 	[SerializeField] private LineController lineController;
 	
 	private Vector2 currentSpeed;
@@ -29,6 +31,8 @@ public class Skill_burst : MonoBehaviour {
 		gameController.GetComponent<GameController>().stopNextRound();
 		//處理board
 		ball.GetComponentsInChildren<ParticleSystem>()[0].Play();
+		burstMusic.changePitch();
+
 		InvokeRepeating("quickBall", 2f,1f);
 
 	}
@@ -39,7 +43,7 @@ public class Skill_burst : MonoBehaviour {
 		{
 			invert.SetFloat("_InvertColors",1);
 			ball.GetComponentsInChildren<ParticleSystem>()[2].Play();
-			ball.GetComponent<Rigidbody2D>().velocity = currentSpeed * 3f;
+			ball.GetComponent<Rigidbody2D>().velocity = currentSpeed * 2f;
 			board.transform.localScale = new Vector3(10,1);
 		}
 		else
@@ -49,7 +53,7 @@ public class Skill_burst : MonoBehaviour {
 				timer = 0;
 				invert.SetFloat("_InvertColors",0);
 				Vector2 doubleSpeed = ball.GetComponent<Rigidbody2D>().velocity;
-				ball.GetComponent<Rigidbody2D>().velocity = doubleSpeed / 3f;
+				ball.GetComponent<Rigidbody2D>().velocity = doubleSpeed / 2f;
 				board.transform.localScale = new Vector3(0.6f,0.6f);
 				lineController.burstCheck = true;
 				CancelInvoke("quickBall");

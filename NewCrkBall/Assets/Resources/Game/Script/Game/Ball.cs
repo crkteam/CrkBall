@@ -13,6 +13,9 @@ public class Ball : MonoBehaviour
     //Particle System
     public ParticleSystem death_particle;
     // Use this for initialization
+    
+    // SpriteRenderer
+    public SpriteRenderer left, right;
     void Start()
     {
         ballAttack = 1;
@@ -54,5 +57,29 @@ public class Ball : MonoBehaviour
             GameObject.Find("Connect").GetComponent<AudioSource>().Play();
         }
         
+        if (other.gameObject.name.Equals("Left_Block"))
+        {
+            
+            
+            left.enabled = true;
+            Invoke("closeLeft",.125f);
+        }
+
+        if (other.gameObject.name.Equals("Right_Block"))
+        {
+            right.enabled = true;
+            Invoke("closeRight",.125f);
+
+        }
+    }
+
+    void closeRight()
+    {
+        right.enabled = false;
+    }
+
+    void closeLeft()
+    {
+        left.enabled = false;
     }
 }

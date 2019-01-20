@@ -9,6 +9,9 @@ public class GameController : MonoBehaviour
     public LineController lineController;
     public BlockHolder blockHolder;
     public Result result;
+    
+    // music
+    public AudioSource music_death,music_main;
 
     public TextMesh pointUI, levelUI;
     
@@ -96,6 +99,8 @@ public class GameController : MonoBehaviour
 
     public void gameover()
     {
+        music_main.volume = 0.1f;
+        music_death.Play();
         Invoke("gameover_result",1);  
         CancelInvoke("nextRound");
         Debug.Log("death");
