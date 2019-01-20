@@ -10,6 +10,8 @@ public class Ball : MonoBehaviour
     private int ballAttack;
     public GameController gameController;
     
+    //Particle System
+    public ParticleSystem death_particle;
     // Use this for initialization
     void Start()
     {
@@ -29,6 +31,11 @@ public class Ball : MonoBehaviour
 
         if (gameObject.transform.position.y < -5.3)
         {
+            Vector3 current = death_particle.GetComponent<Transform>().transform.position;
+            current.x = gameObject.transform.position.x;
+
+            death_particle.GetComponent<Transform>().transform.position = current;
+            death_particle.Play();
             gameController.gameover();
             Destroy(gameObject);
         }

@@ -9,19 +9,20 @@ public class GameController : MonoBehaviour
     public LineController lineController;
     public BlockHolder blockHolder;
     public Result result;
-    
-    public TextMesh pointUI,levelUI;
 
+    public TextMesh pointUI, levelUI;
+    
     // attribute
     [SerializeField] private int round, point;
 
-    [Header("TitleBar_image")]public GameObject TitleBar_Level;
+    [Header("TitleBar_image")] public GameObject TitleBar_Level;
+
     // Use this for initialization
     void Start()
     {
         init();
         InvokeRepeating("nextRound", 5, 5f);
-        Invoke("nextRoundAnimation",4.5f);
+        Invoke("nextRoundAnimation", 4.5f);
     }
 
     void init()
@@ -29,7 +30,6 @@ public class GameController : MonoBehaviour
         round = 0;
         GameObject.Find("Point").GetComponent<MeshRenderer>().sortingLayerName = "2";
         nextRound();
-        
     }
 
     public void stopNextRound()
@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour
     public int[] getResult()
     {
         int[] result = {round, point};
-        
+
         return result;
     }
 
@@ -76,8 +76,9 @@ public class GameController : MonoBehaviour
 
     void nextRoundAnimation()
     {
-     TitleBar_Level.GetComponent<Animator>().SetTrigger("Whirl");   
+        TitleBar_Level.GetComponent<Animator>().SetTrigger("Whirl");
     }
+
     void nextRound()
     {
         round++;
@@ -87,15 +88,21 @@ public class GameController : MonoBehaviour
             if (gameObject != null)
                 gameObject.transform.position += new Vector3(0, -0.7f);
         }
-Invoke("nextRoundAnimation",4.5f);
+
+        Invoke("nextRoundAnimation", 4.5f);
         lineController.blockHP = round;
         lineController.createLIne();
     }
 
     public void gameover()
     {
-        result.compute();
+        Invoke("gameover_result",1);  
         CancelInvoke("nextRound");
         Debug.Log("death");
+    }
+
+    private void gameover_result() // 因為要等死亡動畫先播放
+    {
+        result.compute();
     }
 }
