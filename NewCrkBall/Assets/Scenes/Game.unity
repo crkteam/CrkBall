@@ -16695,6 +16695,7 @@ GameObject:
   - component: {fileID: 1242613846}
   - component: {fileID: 1242613847}
   - component: {fileID: 1242613848}
+  - component: {fileID: 1242613849}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -16803,6 +16804,7 @@ MonoBehaviour:
   lineController: {fileID: 1242613846}
   blockHolder: {fileID: 1837303377}
   result: {fileID: 1242613848}
+  ads: {fileID: 1242613849}
   music_death: {fileID: 833889736}
   music_main: {fileID: 1809652766}
   pointUI: {fileID: 1039854548}
@@ -16826,6 +16828,17 @@ MonoBehaviour:
   result_point: {fileID: 1185109949}
   gameController: {fileID: 1242613847}
   result_background: {fileID: 2007638492}
+--- !u!114 &1242613849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1242613841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8131b82471b57244dac93be446303925, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1383026130
 GameObject:
   m_ObjectHideFlags: 0
