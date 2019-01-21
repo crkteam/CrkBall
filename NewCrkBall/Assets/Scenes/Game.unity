@@ -6493,8 +6493,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 929849968}
+  m_Children: []
   m_Father: {fileID: 1227584105}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6535,7 +6534,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.13530469}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6546,7 +6545,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.7293906}
   m_EdgeRadius: 0
 --- !u!1 &887536692
 GameObject:
@@ -11319,11 +11318,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 929849967}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.539978, y: 3.829956, z: 0}
-  m_LocalScale: {x: 5.5200005, y: 0.51857775, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.00008812054, y: -0.70009017, z: 0}
+  m_LocalScale: {x: 2638.1611, y: 0.0035995457, z: 1}
   m_Children: []
-  m_Father: {fileID: 868126062}
+  m_Father: {fileID: 1997333173}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &929849969
@@ -16784,6 +16783,12 @@ MonoBehaviour:
   burst: {fileID: 1603118686060524, guid: 55e3a057033a7d84e84b7b31059806ff, type: 2}
   blockHP: 0
   burstCheck: 1
+  colorBlock:
+  - {fileID: 21300000, guid: 3eec7b3b2085eee478f77a4a38d46334, type: 3}
+  - {fileID: 21300000, guid: 2125ac3750ae7f3409abecd277be0353, type: 3}
+  - {fileID: 21300000, guid: af99c59fdd9b2c544a27355329302fa0, type: 3}
+  - {fileID: 21300000, guid: c25df532554435d42a7b21cb0f60e9f6, type: 3}
+  - {fileID: 21300000, guid: 2181b7d075c19ab4abf1684ffc3c47d5, type: 3}
 --- !u!114 &1242613847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16802,6 +16807,7 @@ MonoBehaviour:
   music_main: {fileID: 1809652766}
   pointUI: {fileID: 1039854548}
   levelUI: {fileID: 421697168}
+  invert: {fileID: 2100000, guid: e05b1c7da66d2824a94b47ba7ddee8c4, type: 2}
   round: 0
   point: 0
   TitleBar_Level: {fileID: 1833443253}
@@ -18026,7 +18032,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.19641161}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -18037,7 +18043,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.6071768}
   m_EdgeRadius: 0
 --- !u!1 &1991615233
 GameObject:
@@ -18097,7 +18103,8 @@ Transform:
   m_LocalRotation: {x: -0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: -722.52, y: -1280.6771, z: 0}
   m_LocalScale: {x: 144.0676, y: 0.002092367, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 929849968}
   m_Father: {fileID: 1227584105}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}

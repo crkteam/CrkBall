@@ -4,18 +4,24 @@ using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 using UnityEngine.SceneManagement;
 using Button = UnityEngine.UI.Button;
+using Image = UnityEngine.UI.Image;
 
 public class ButtonController : MonoBehaviour
 {
+    public Image start;
     [SerializeField]
     private AudioSource Next,Main;
     
     public void goGame()
     {
-        Main.Stop();
-        Next.Play();
+        if (start.color.a >= 1)
+        {
+            Main.Stop();
+            Next.Play();
         
-        Invoke("next",1);
+            Invoke("next",1);
+        }
+
     }
 
     void next()

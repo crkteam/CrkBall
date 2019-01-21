@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.U2D;
 
 public class LineController : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class LineController : MonoBehaviour
     public int blockHP = 0;
     public bool burstCheck = true;
 
+    //colorBlock
+    public Sprite[] colorBlock = new Sprite[5];
     public void createLIne()
     {
         int[] random = getRandom();
@@ -84,6 +87,7 @@ public class LineController : MonoBehaviour
         if (r_block.gameObject.name.Equals("Block(Clone)"))
         {
             r_block.GetComponent<Block>().initBlockHP(setBlockHP());
+            r_block.GetComponent<SpriteRenderer>().sprite = colorBlock[Random.Range(0, 5)];
         }
 
         return r_block;

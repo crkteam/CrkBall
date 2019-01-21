@@ -91,6 +91,7 @@
         <e p="Shader" t="Include">
           <e p="Additive_Base.shader" t="Include" />
         </e>
+        <e p="Test.cs" t="Include" />
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="NewCrkBall.sln" t="IncludeFlat" />

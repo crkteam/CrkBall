@@ -15,6 +15,8 @@ public class GameController : MonoBehaviour
 
     public TextMesh pointUI, levelUI;
     
+    //needToClose
+    public Material invert;
     // attribute
     [SerializeField] private int round, point;
 
@@ -99,6 +101,7 @@ public class GameController : MonoBehaviour
 
     public void gameover()
     {
+        invert.SetFloat("_InvertColors",0); //確保bug把它關掉
         music_main.volume = 0.1f;
         music_death.Play();
         Invoke("gameover_result",1);  
