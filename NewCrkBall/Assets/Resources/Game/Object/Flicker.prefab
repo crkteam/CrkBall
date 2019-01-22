@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4713760148240070}
   - component: {fileID: 212845948539704730}
   - component: {fileID: 114513564147460586}
+  - component: {fileID: 50371452306894750}
   m_Layer: 0
   m_Name: Flicker
   m_TagString: Untagged
@@ -41,6 +42,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50371452306894750
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1775854795334198}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &114513564147460586
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,7 +110,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f035644bfc468864b96e7b8f56c49d18, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e099e3249fb54e8c9562e8ead5ac1ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

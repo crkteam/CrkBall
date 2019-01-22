@@ -19,6 +19,7 @@ public class Ball : MonoBehaviour
 
     // SpriteRenderer
     public SpriteRenderer left, right;
+    private float SpeedControllValue = 0.1f; //handle速度
 
     void Start()
     {
@@ -92,24 +93,52 @@ public class Ball : MonoBehaviour
     void speedHandler()
     {
         float judge = Math.Abs(currentSpeed.x) + Math.Abs(currentSpeed.y);
-
         if (judge > 12)
         {
             Vector2 bufferSpeed = currentSpeed;
-            bufferSpeed.x -= 0.1f;
-            bufferSpeed.y -= 0.1f;
+            if (bufferSpeed.x > 0)
+            {
+                bufferSpeed.x -= SpeedControllValue;
+            }
+            else
+            {
+                bufferSpeed.x += SpeedControllValue;
+            }
+
+            if (bufferSpeed.y > 0)
+            {
+                bufferSpeed.y -= SpeedControllValue;
+            }
+            else
+            {
+                bufferSpeed.y += SpeedControllValue;
+            }
 
             gameObject.GetComponent<Rigidbody2D>().velocity = bufferSpeed;
         }
 
-        if (judge < 10)
+        if (judge < 11)
         {
             Vector2 bufferSpeed = currentSpeed;
-            bufferSpeed.x += 0.1f;
-            bufferSpeed.y += 0.1f;
-            
+            if (bufferSpeed.x > 0)
+            {
+                bufferSpeed.x += SpeedControllValue;
+            }
+            else
+            {
+                bufferSpeed.x -= SpeedControllValue;
+            }
+
+            if (bufferSpeed.y > 0)
+            {
+                bufferSpeed.y += SpeedControllValue;
+            }
+            else
+            {
+                bufferSpeed.y -= SpeedControllValue;
+            }
+
             gameObject.GetComponent<Rigidbody2D>().velocity = bufferSpeed;
         }
-        
     }
 }
