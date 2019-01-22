@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class flicker : MonoBehaviour
+public class Flicker : MonoBehaviour
 {
     private AudioSource audio;
     public GameObject GameControll;
     private float[] samples = new float[8192];
-
     private float temp;
+    public float Speed=2;
 
 // Use this for initialization
     void Start()
     {
         GameControll = GameObject.Find("Game");
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 4f);
         audio = GameControll.GetComponent<AudioSource>();
     }
 
@@ -33,6 +33,6 @@ public class flicker : MonoBehaviour
         Color color = gameObject.GetComponent<SpriteRenderer>().color;
         color.a -= 0.005f;
         gameObject.GetComponent<SpriteRenderer>().color = color;
-        gameObject.transform.position += Vector3.up * Time.deltaTime*1.5f;
+        gameObject.transform.position += Vector3.up * Time.deltaTime * Speed;
     }
-}   
+}

@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GameControll: {fileID: 0}
+  Speed: 2
 --- !u!212 &212845948539704730
 SpriteRenderer:
   m_ObjectHideFlags: 1
