@@ -1,25 +1,29 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Ball : MonoBehaviour
 {
-    [SerializeField] Vector2 v;
-    
-    [SerializeField]
-    private int ballAttack;
+    [SerializeField] Vector2 currentSpeed;
+
+    [SerializeField] private int ballAttack;
     public GameController gameController;
-    
+
+    public bool speedHandlerSwitch = true;
+
     //Particle System
     public ParticleSystem death_particle;
     // Use this for initialization
-    
+
     // SpriteRenderer
     public SpriteRenderer left, right;
+
     void Start()
     {
         ballAttack = 1;
-        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(8,4);
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(8, 4);
     }
 
     public void addBallAttack()
@@ -30,7 +34,7 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        v = gameObject.GetComponent<Rigidbody2D>().velocity;
+        currentSpeed = gameObject.GetComponent<Rigidbody2D>().velocity;
 
         if (gameObject.transform.position.y < -5.3)
         {
@@ -42,34 +46,36 @@ public class Ball : MonoBehaviour
             gameController.gameover();
             Destroy(gameObject);
         }
+
+        // 速度維持器
+        if (speedHandlerSwitch)
+        {
+            speedHandler();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        
         if (other.gameObject.tag.Equals("Block"))
         {
-            other.gameObject.GetComponent<Block>().hit(ballAttack);            
+            other.gameObject.GetComponent<Block>().hit(ballAttack);
         }
-        
+
         if (other.gameObject.name.Equals("Board"))
         {
             GameObject.Find("Connect").GetComponent<AudioSource>().Play();
         }
-        
+
         if (other.gameObject.name.Equals("Left_Block"))
         {
-            
-            
             left.enabled = true;
-            Invoke("closeLeft",.125f);
+            Invoke("closeLeft", .125f);
         }
 
         if (other.gameObject.name.Equals("Right_Block"))
         {
             right.enabled = true;
-            Invoke("closeRight",.125f);
-
+            Invoke("closeRight", .125f);
         }
     }
 
@@ -81,5 +87,29 @@ public class Ball : MonoBehaviour
     void closeLeft()
     {
         left.enabled = false;
+    }
+
+    void speedHandler()
+    {
+        float judge = Math.Abs(currentSpeed.x) + Math.Abs(currentSpeed.y);
+
+        if (judge > 12)
+        {
+            Vector2 bufferSpeed = currentSpeed;
+            bufferSpeed.x -= 0.1f;
+            bufferSpeed.y -= 0.1f;
+
+            gameObject.GetComponent<Rigidbody2D>().velocity = bufferSpeed;
+        }
+
+        if (judge < 10)
+        {
+            Vector2 bufferSpeed = currentSpeed;
+            bufferSpeed.x += 0.1f;
+            bufferSpeed.y += 0.1f;
+            
+            gameObject.GetComponent<Rigidbody2D>().velocity = bufferSpeed;
+        }
+        
     }
 }

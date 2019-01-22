@@ -502,7 +502,7 @@ Transform:
   m_LocalScale: {x: 0.05220765, y: 0.05220765, z: 0.05220765}
   m_Children: []
   m_Father: {fileID: 1631114242}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!102 &194807055
 TextMesh:
@@ -1288,7 +1288,7 @@ Transform:
   - {fileID: 1917766647}
   - {fileID: 421697167}
   m_Father: {fileID: 1631114242}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &673723552
 GameObject:
@@ -6069,9 +6069,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7197a5480e469e14798f965db5f0336d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  v: {x: 0, y: 0}
+  currentSpeed: {x: 0, y: 0}
   ballAttack: 0
   gameController: {fileID: 1242613847}
+  speedHandlerSwitch: 1
   death_particle: {fileID: 708008974}
   left: {fileID: 929849969}
   right: {fileID: 826303500}
@@ -6534,7 +6535,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.13530469}
+  m_Offset: {x: 0.06361663, y: -0.13530469}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6545,7 +6546,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.7293906}
+  m_Size: {x: 0.87276673, y: 0.7293906}
   m_EdgeRadius: 0
 --- !u!1 &887536692
 GameObject:
@@ -17253,10 +17254,10 @@ Transform:
   m_Children:
   - {fileID: 973775850}
   - {fileID: 495844966}
-  - {fileID: 1667492578}
   - {fileID: 538897754}
   - {fileID: 1658369328}
   - {fileID: 194807054}
+  - {fileID: 2114917235}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17288,7 +17289,7 @@ Transform:
   m_LocalScale: {x: 0.5177842, y: 0.5932123, z: 0.5932123}
   m_Children: []
   m_Father: {fileID: 1631114242}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1658369329
 BoxCollider2D:
@@ -17360,80 +17361,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
---- !u!1 &1667492576
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1667492578}
-  - component: {fileID: 1667492577}
-  m_Layer: 0
-  m_Name: Power
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1667492577
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1667492576}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2f6e4e83b1fe1864a91af74ed7e344fd, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 0.55, y: 0.71}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
---- !u!4 &1667492578
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1667492576}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2031337, y: 4.9923043, z: -0.024451379}
-  m_LocalScale: {x: 0.50225884, y: 0.50225866, z: 0.50225866}
-  m_Children: []
-  m_Father: {fileID: 1631114242}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1733191267
 GameObject:
   m_ObjectHideFlags: 0
@@ -18045,7 +17972,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.19641161}
+  m_Offset: {x: -0.046889305, y: -0.19641161}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -18056,7 +17983,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.6071768}
+  m_Size: {x: 0.9062214, y: 0.6071768}
   m_EdgeRadius: 0
 --- !u!1 &1991615233
 GameObject:
@@ -18461,6 +18388,48 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1cac195ef8582cb4abaf70217fb3e39c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2114917234
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2114917235}
+  - component: {fileID: 2114917236}
+  m_Layer: 0
+  m_Name: PowerLine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2114917235
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2114917234}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.145, y: 4.973, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1631114242}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2114917236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2114917234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20444c623564dcd4a8101e0c10974175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ten: {fileID: 1312013474457722, guid: c02fdb06e5e57e04bbbbb14bec97ed39, type: 2}
+  digits: {fileID: 1343983412086946, guid: 40e5f68e8852a7743b896ac776b74e01, type: 2}
 --- !u!1 &2121074201
 GameObject:
   m_ObjectHideFlags: 0
