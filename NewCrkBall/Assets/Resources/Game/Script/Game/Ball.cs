@@ -19,12 +19,12 @@ public class Ball : MonoBehaviour
 
     // SpriteRenderer
     public SpriteRenderer left, right;
-    private float SpeedControllValue = 0.1f; //handle速度
+    private float SpeedControllValue = 0.2f; //handle速度
 
     void Start()
     {
         ballAttack = 1;
-        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(8, 4);
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(11, 4);
     }
 
     public void addBallAttack()
@@ -107,11 +107,27 @@ public class Ball : MonoBehaviour
 
             if (bufferSpeed.y > 0)
             {
-                bufferSpeed.y -= SpeedControllValue;
+                if (bufferSpeed.y < .5f) //速度過快但垂直速度過低
+                {
+                    bufferSpeed.y += SpeedControllValue*.5f;
+                }
+                else
+                {
+                    bufferSpeed.y -= SpeedControllValue;
+                }
+               
             }
             else
             {
-                bufferSpeed.y += SpeedControllValue;
+                if (bufferSpeed.y > -.5f) //速度過慢但垂直速度過低
+                {
+                    bufferSpeed.y -= SpeedControllValue*.5f;
+                }
+                else
+                {
+                     bufferSpeed.y += SpeedControllValue;
+                }
+               
             }
 
             gameObject.GetComponent<Rigidbody2D>().velocity = bufferSpeed;

@@ -11412,11 +11412,11 @@ EdgeCollider2D:
   - {x: 1.5570297, y: 0.060432747}
   - {x: 1.6181997, y: -0.04064639}
   - {x: 1.6013886, y: -0.11846144}
-  - {x: 1.9624853, y: -5.5288134}
-  - {x: 1.8066614, y: -5.584465}
-  - {x: 0.91451627, y: -5.6269665}
-  - {x: -1.2768081, y: -5.600081}
-  - {x: -1.8905365, y: -5.5573497}
+  - {x: 1.5341853, y: -0.20128089}
+  - {x: 0.94316256, y: -0.20097254}
+  - {x: 0.3255336, y: -0.1917076}
+  - {x: -1.1267607, y: -0.1958823}
+  - {x: -1.5154166, y: -0.2018372}
   - {x: -1.5647267, y: -0.14764863}
   - {x: -1.5581721, y: -0.01965443}
   - {x: -1.4123285, y: 0.12506483}
@@ -16697,6 +16697,7 @@ GameObject:
   - component: {fileID: 1242613847}
   - component: {fileID: 1242613848}
   - component: {fileID: 1242613849}
+  - component: {fileID: 1242613850}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -16738,7 +16739,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.533123
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -16840,6 +16841,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8131b82471b57244dac93be446303925, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1242613850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1242613841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e728e9a81e45470ca50fe5a7639a33f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Background: {fileID: 1470105655107602, guid: 5033ae6a6ca064f8aa3b83f9fcae2b57, type: 2}
 --- !u!1 &1383026130
 GameObject:
   m_ObjectHideFlags: 0
