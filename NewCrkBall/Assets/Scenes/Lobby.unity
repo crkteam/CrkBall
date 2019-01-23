@@ -6002,5 +6002,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56774e016adbd49db932d0566d10df5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoBG: {fileID: 1337801858686094, guid: 5d5f0d010610045ae9c450622eabee13, type: 2}
+  autoBG: {fileID: 1331496628036076, guid: ec6bd424bfb458543ae1eda96c572ac8, type: 2}
   canvas: {fileID: 686314703}
