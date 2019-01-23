@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Button = UnityEngine.UI.Button;
 using Image = UnityEngine.UI.Image;
 
@@ -11,7 +12,8 @@ public class ButtonController : MonoBehaviour
     public Image start;
     [SerializeField]
     private AudioSource Next,Main;
-    
+
+    [SerializeField] private GameObject achievement;
     public void goGame()
     {
         if (start.color.a >= 1)
@@ -28,4 +30,16 @@ public class ButtonController : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
     }
+
+    public void open_achive()
+    {
+        achievement.SetActive(true);
+    }
+    
+    public void close_achive()
+    {
+        achievement.SetActive(false);
+    }
+   
 }
+

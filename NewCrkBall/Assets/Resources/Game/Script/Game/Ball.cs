@@ -16,6 +16,8 @@ public class Ball : MonoBehaviour
     //Particle System
     public ParticleSystem death_particle;
     // Use this for initialization
+    //Music
+    public AudioSource attack;
 
     // SpriteRenderer
     public SpriteRenderer left, right;
@@ -29,6 +31,7 @@ public class Ball : MonoBehaviour
 
     public void addBallAttack()
     {
+        attack.Play();
         ballAttack++;
     }
 
