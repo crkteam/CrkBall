@@ -16803,11 +16803,11 @@ MonoBehaviour:
   blockHP: 0
   burstCheck: 1
   colorBlock:
-  - {fileID: 21300000, guid: 3eec7b3b2085eee478f77a4a38d46334, type: 3}
-  - {fileID: 21300000, guid: 2125ac3750ae7f3409abecd277be0353, type: 3}
-  - {fileID: 21300000, guid: af99c59fdd9b2c544a27355329302fa0, type: 3}
-  - {fileID: 21300000, guid: c25df532554435d42a7b21cb0f60e9f6, type: 3}
-  - {fileID: 21300000, guid: 2181b7d075c19ab4abf1684ffc3c47d5, type: 3}
+  - {fileID: 21300000, guid: 31c03841c3dde184389f24479f767200, type: 3}
+  - {fileID: 21300000, guid: 30338fbbc323f2948b4e692f02899dba, type: 3}
+  - {fileID: 21300000, guid: c683408110a3e974caa38c6c047c2515, type: 3}
+  - {fileID: 21300000, guid: 6fdddfc39d8fe16448459f8eafa34a97, type: 3}
+  - {fileID: 21300000, guid: 705848794a9312a458983fbe0cf7d618, type: 3}
 --- !u!114 &1242613847
 MonoBehaviour:
   m_ObjectHideFlags: 0
