@@ -71,12 +71,16 @@ public class Ball : MonoBehaviour
         {
             left.enabled = true;
             Invoke("closeLeft", .125f);
+            GameObject.Find("HitWall").GetComponent<AudioSource>().Play();
+
         }
 
         if (other.gameObject.name.Equals("Right_Block"))
         {
             right.enabled = true;
             Invoke("closeRight", .125f);
+            GameObject.Find("HitWall").GetComponent<AudioSource>().Play();
+
         }
     }
 

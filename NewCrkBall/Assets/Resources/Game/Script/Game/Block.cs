@@ -24,8 +24,7 @@ public class Block : MonoBehaviour
     public void hit(int attack)
     {
         Color full = gameObject.GetComponentsInChildren<SpriteRenderer>()[1].color;
-        GameObject.Find("Hit").GetComponent<AudioSource>().Play();
-        full.a = 255;
+       full.a = 255;
         gameObject.GetComponentsInChildren<SpriteRenderer>()[1].color = full;
         Invoke("flash", 0.2f);
 
@@ -35,6 +34,11 @@ public class Block : MonoBehaviour
         if (blockHP <= 0)
         {
             dead();
+        }
+        else
+        {
+             GameObject.Find("Hit").GetComponent<AudioSource>().Play();
+                    
         }
     }
 

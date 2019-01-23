@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Pause_Button : MonoBehaviour {
     private void OnMouseDown()
     {
+        GameObject.Find("Click").GetComponent<AudioSource>().Play();
+    
         if (gameObject.name.Equals("Return"))
         {
             GameObject.Find("pause_background").SetActive(false);

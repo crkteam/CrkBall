@@ -9,6 +9,7 @@ public class Result_Button : MonoBehaviour {
         
         if (gameObject.name.Equals("Result_Home"))
         {
+            
             SceneManager.LoadScene("Lobby");
         }
         
