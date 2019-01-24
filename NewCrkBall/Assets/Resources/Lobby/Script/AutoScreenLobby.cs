@@ -7,7 +7,7 @@ public class AutoScreenLobby : MonoBehaviour
 	public GameObject autoBG, canvas;
 	// Use this for initialization
 	void Start () {
-		if (Screen.height / Screen.width == 2)
+		if (Screen.height / Screen.width >= 2)
 		{
 			GameObject Background = Instantiate(autoBG);
 			Background.transform.parent = canvas.transform;
