@@ -8,7 +8,7 @@ public class Ads : MonoBehaviour {
 	private InterstitialAd interstitial;
 	// Use this for initialization
 	void Start () {
-		string adUnitId = "ca-app-pub-3940256099942544/1033173712";
+		string adUnitId = "ca-app-pub-4564963026533389/8787282204";
 		// Initialize an InterstitialAd.
 		interstitial = new InterstitialAd(adUnitId);
 		AdRequest request = new AdRequest.Builder().Build();

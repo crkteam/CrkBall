@@ -37,8 +37,7 @@ public class Block : MonoBehaviour
         }
         else
         {
-             GameObject.Find("Hit").GetComponent<AudioSource>().Play();
-                    
+             GameObject.Find("Hit").GetComponent<AudioSource>().Play();         
         }
     }
 
