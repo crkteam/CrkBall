@@ -14,18 +14,18 @@ public class Flicker : MonoBehaviour
 // Use this for initialization
     void Start()
     {
-        TorqueRange = Random.Range(-45,45);
+        TorqueRange = Random.Range(-180,180);
         GameControll = GameObject.Find("Game");
         Destroy(gameObject, 4f);
         audio = GameControll.GetComponent<AudioSource>();
-        
+          gameObject.GetComponent<Rigidbody2D>().AddTorque(TorqueRange);
+               
     }
 
     // Update is called once per frame
     void Update()
     {
-        gameObject.GetComponent<Rigidbody2D>().AddTorque(TorqueRange);
-        audio.GetSpectrumData(samples, 0, FFTWindow.BlackmanHarris);
+       audio.GetSpectrumData(samples, 0, FFTWindow.BlackmanHarris);
         for (int i = 0; i < samples.Length; i++)
         {
             temp += samples[i] * .3f;
