@@ -25,7 +25,7 @@ public class Board : MonoBehaviour
             }
             else if (Input.touches[0].phase == TouchPhase.Moved)
             {
-                gameObject.transform.position += new Vector3(Input.touches[0].deltaPosition.x / 100, 0);
+                gameObject.transform.position += new Vector3(Input.touches[0].deltaPosition.x / 150, 0);
             }
         }
 

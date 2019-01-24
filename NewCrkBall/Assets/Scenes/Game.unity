@@ -11395,6 +11395,8 @@ GameObject:
   - component: {fileID: 947789500}
   - component: {fileID: 947789502}
   - component: {fileID: 947789499}
+  - component: {fileID: 947789504}
+  - component: {fileID: 947789503}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -11420,7 +11422,8 @@ EdgeCollider2D:
   - {x: -1.4023323, y: 0.12544711}
   - {x: -1.1743524, y: 0.20429927}
   - {x: -0.77172095, y: 0.19634563}
-  - {x: 1.2187011, y: 0.20553268}
+  - {x: 0.86312497, y: 0.19696313}
+  - {x: 1.236655, y: 0.19684154}
   - {x: 1.4323051, y: 0.151755}
   - {x: 1.5570297, y: 0.060432747}
   - {x: 1.6181997, y: -0.04064639}
@@ -11502,6 +11505,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f17f81b94787af41a074ad8c0d9b5b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!68 &947789503
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 947789498}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.3978201, y: 0.12164512}
+  - {x: 1.5284677, y: -0.18246728}
+--- !u!68 &947789504
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 947789498}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.5227871, y: -0.187997}
+  - {x: 1.3921402, y: 0.15482186}
 --- !u!1 &957061149
 GameObject:
   m_ObjectHideFlags: 0
