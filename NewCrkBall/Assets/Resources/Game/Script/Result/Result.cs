@@ -11,8 +11,8 @@ public class Result : MonoBehaviour
         [SerializeField] private GameObject result_background;
         void Start()
         {
-                result_level.GetComponent<MeshRenderer>().sortingLayerName = "Result";
-                result_point.GetComponent<MeshRenderer>().sortingLayerName = "Result";
+                result_level.GetComponent<MeshRenderer>().sortingLayerName = "Result_UI";
+                result_point.GetComponent<MeshRenderer>().sortingLayerName = "Result_UI";
         }
 
         public void compute()

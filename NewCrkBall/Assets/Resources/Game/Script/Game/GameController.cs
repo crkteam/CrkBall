@@ -53,6 +53,11 @@ public class GameController : MonoBehaviour
         pointUI.transform.localScale = new Vector3(1.2f, 1.2f);
         StartCoroutine(pointScale());
     }
+    
+    public int getPoint()
+    {
+        return point;
+    }
 
     public int[] getResult()
     {
@@ -100,6 +105,7 @@ public class GameController : MonoBehaviour
         Invoke("nextRoundAnimation", 4.5f);
         lineController.blockHP = round;
         lineController.createLIne();
+        
     }
 
     public void gameover()
