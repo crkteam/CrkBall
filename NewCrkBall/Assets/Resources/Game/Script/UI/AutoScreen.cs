@@ -8,7 +8,6 @@ public class AutoScreen : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		Debug.Log(Screen.height);
 		if (Screen.height / Screen.width==2)
 		{
 			Camera.GetComponent<Camera>().orthographicSize = 5.54f;

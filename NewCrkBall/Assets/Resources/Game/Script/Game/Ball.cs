@@ -26,6 +26,7 @@ public class Ball : MonoBehaviour
     void Start()
     {
         ballAttack = 1;
+   
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(11, 4);
     }
 
