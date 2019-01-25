@@ -14,6 +14,13 @@ public class ButtonController : MonoBehaviour
     private AudioSource Next,Main;
 
     [SerializeField] private GameObject achievement;
+
+    private void Awake()
+    {
+        //修改当前的FPS
+        Application.targetFrameRate = 60;
+    }
+
     public void goGame()
     {
         if (start.color.a >= 1)

@@ -25,6 +25,11 @@ public class GameController : MonoBehaviour
 
     [Header("TitleBar_image")] public GameObject TitleBar_Level;
 
+    void Awake(){
+    //修改当前的FPS
+        Application.targetFrameRate = 60;
+    }
+    
     // Use this for initialization
     void Start()
     {
