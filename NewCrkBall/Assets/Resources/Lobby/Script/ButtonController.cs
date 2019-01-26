@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Button = UnityEngine.UI.Button;
 using Image = UnityEngine.UI.Image;
@@ -13,7 +15,9 @@ public class ButtonController : MonoBehaviour
     [SerializeField]
     private AudioSource Next,Main;
 
-    [SerializeField] private GameObject achievement;
+    [SerializeField] private Lobby_Firebase lobbyFirebase;
+    [SerializeField] private InputField Id, password;
+    [SerializeField] private GameObject login,leaderboard,achievement;
 
     private void Awake()
     {
@@ -38,6 +42,24 @@ public class ButtonController : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
+    public void open_leaderboard()
+    {
+        if (PlayerPrefs.GetInt("Login") == 1)
+        {
+            leaderboard.SetActive(true);
+        }
+        else
+        {
+            login.SetActive(true);
+        }
+
+    }
+    
+    public void close_leaderboard()
+    {
+        leaderboard.SetActive(false);
+    }
+
     public void open_achive()
     {
         achievement.SetActive(true);
@@ -47,6 +69,22 @@ public class ButtonController : MonoBehaviour
     {
         achievement.SetActive(false);
     }
-   
+    
+    public void close_login()
+    {
+        login.SetActive(false);
+    }
+
+    public void login_check()
+    {
+        lobbyFirebase.check(Id.text,password.text);
+    }
+
+    public void openFan()
+    {
+        Application.OpenURL("https://www.facebook.com/CrkTeam-1996298847156168");
+    }
+    
+    
 }
 

@@ -15,9 +15,4 @@ public class AutoScreenLobby : MonoBehaviour
 			Background.transform.localScale=new Vector2(1,1);
 		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
