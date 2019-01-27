@@ -381,7 +381,7 @@ RectTransform:
   m_GameObject: {fileID: 145462613}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.460727, y: 1.5122087, z: 1.5122087}
+  m_LocalScale: {x: 4.46, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 1129810275}
   m_RootOrder: 3
@@ -8443,6 +8443,8 @@ GameObject:
   - component: {fileID: 2062194482}
   - component: {fileID: 2062194481}
   - component: {fileID: 2062194480}
+  - component: {fileID: 2062194484}
+  - component: {fileID: 2062194483}
   m_Layer: 5
   m_Name: Submit
   m_TagString: Untagged
@@ -8458,7 +8460,7 @@ RectTransform:
   m_GameObject: {fileID: 2062194478}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.15014471, y: 0.36034706, z: 0.53384745}
+  m_LocalScale: {x: 0.15, y: 0.36, z: 0.53}
   m_Children:
   - {fileID: 1981037495}
   m_Father: {fileID: 1258748696}
@@ -8519,6 +8521,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2062194483}
+        m_MethodName: ClickBotton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2062194481
@@ -8554,6 +8567,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2062194478}
+--- !u!114 &2062194483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2062194478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7d889fb8fc6343d1942ca24ad0ef36c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &2062194484
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2062194478}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5b9149bd59c234005a6a0b6d933fcec1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2131294400
 GameObject:
   m_ObjectHideFlags: 0

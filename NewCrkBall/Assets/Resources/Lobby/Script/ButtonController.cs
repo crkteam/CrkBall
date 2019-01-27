@@ -27,12 +27,16 @@ public class ButtonController : MonoBehaviour
 
     public void goGame()
     {
-        if (start.color.a >= 1)
+        if (InternetDetect())
         {
-            Main.Stop();
-            Next.Play();
-        
-            Invoke("next",1);
+            if (start.color.a >= 1)
+            {
+                Main.Stop();
+                Next.Play();
+
+                Invoke("next", 1);
+            }
+
         }
 
     }
@@ -44,13 +48,16 @@ public class ButtonController : MonoBehaviour
 
     public void open_leaderboard()
     {
-        if (PlayerPrefs.GetInt("Login") == 1)
+        if (InternetDetect())
         {
-            leaderboard.SetActive(true);
-        }
-        else
-        {
-            login.SetActive(true);
+            if (PlayerPrefs.GetInt("Login") == 1)
+            {
+                leaderboard.SetActive(true);
+            }
+            else
+            {
+                login.SetActive(true);
+            }
         }
 
     }
@@ -84,7 +91,29 @@ public class ButtonController : MonoBehaviour
     {
         Application.OpenURL("https://www.facebook.com/CrkTeam-1996298847156168");
     }
-    
+
+    bool InternetDetect()
+    {
+        if(Application.internetReachability==NetworkReachability.NotReachable)
+        {
+            Debug.Log("尚未開啟網路");
+            return false;
+        }
+        else if(Application.internetReachability==NetworkReachability.ReachableViaLocalAreaNetwork)
+        {
+            Debug.Log("wifi");
+            return true;
+        }
+        else if(Application.internetReachability==NetworkReachability.ReachableViaCarrierDataNetwork)
+        {
+            Debug.Log("行動網路");
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     
 }
 
