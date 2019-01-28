@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using UnityEngine;
 
@@ -22,7 +23,7 @@ public class GameController : MonoBehaviour
 
     // attribute
     [SerializeField] private int round, point;
-
+    
     [Header("TitleBar_image")] public GameObject TitleBar_Level;
 
     void Awake(){
@@ -115,7 +116,7 @@ public class GameController : MonoBehaviour
 
     public void gameover()
     {
-        gameAchievement.newhighPoint(point);
+        gameAchievement.newhighPoint(point,round);
         ads.showADS();
         invert.SetFloat("_InvertColors", 0); //確保bug把它關掉
         music_main.volume = 0.1f;

@@ -29,7 +29,6 @@ public class Lobby_Firebase : MonoBehaviour
     {
         // Set this before calling into the realtime database.
         FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://crkball-49368.firebaseio.com/");
-        DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
         String current_password;
         FirebaseDatabase.DefaultInstance
             .GetReference("user/" + id + "/password")

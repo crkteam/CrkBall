@@ -12,12 +12,11 @@ using Image = UnityEngine.UI.Image;
 public class ButtonController : MonoBehaviour
 {
     public Image start;
-    [SerializeField]
-    private AudioSource Next,Main;
+    [SerializeField] private AudioSource Next, Main;
 
     [SerializeField] private Lobby_Firebase lobbyFirebase;
     [SerializeField] private InputField Id, password;
-    [SerializeField] private GameObject login,leaderboard,achievement;
+    [SerializeField] private GameObject login, leaderboard, achievement;
 
     private void Awake()
     {
@@ -36,9 +35,7 @@ public class ButtonController : MonoBehaviour
 
                 Invoke("next", 1);
             }
-
         }
-
     }
 
     void next()
@@ -50,18 +47,17 @@ public class ButtonController : MonoBehaviour
     {
         if (InternetDetect())
         {
-            if (PlayerPrefs.GetInt("Login") == 1)
+            if (PlayerPrefs.GetInt("Login") != 0)
             {
-                leaderboard.SetActive(true);
+                gameObject.GetComponent<LeaderBoard>().show();
             }
             else
             {
                 login.SetActive(true);
             }
         }
-
     }
-    
+
     public void close_leaderboard()
     {
         leaderboard.SetActive(false);
@@ -71,12 +67,12 @@ public class ButtonController : MonoBehaviour
     {
         achievement.SetActive(true);
     }
-    
+
     public void close_achive()
     {
         achievement.SetActive(false);
     }
-    
+
     public void close_login()
     {
         login.SetActive(false);
@@ -84,7 +80,7 @@ public class ButtonController : MonoBehaviour
 
     public void login_check()
     {
-        lobbyFirebase.check(Id.text,password.text);
+        lobbyFirebase.check(Id.text, password.text);
     }
 
     public void openFan()
@@ -94,17 +90,17 @@ public class ButtonController : MonoBehaviour
 
     bool InternetDetect()
     {
-        if(Application.internetReachability==NetworkReachability.NotReachable)
+        if (Application.internetReachability == NetworkReachability.NotReachable)
         {
             Debug.Log("尚未開啟網路");
             return false;
         }
-        else if(Application.internetReachability==NetworkReachability.ReachableViaLocalAreaNetwork)
+        else if (Application.internetReachability == NetworkReachability.ReachableViaLocalAreaNetwork)
         {
             Debug.Log("wifi");
             return true;
         }
-        else if(Application.internetReachability==NetworkReachability.ReachableViaCarrierDataNetwork)
+        else if (Application.internetReachability == NetworkReachability.ReachableViaCarrierDataNetwork)
         {
             Debug.Log("行動網路");
             return true;
@@ -114,6 +110,4 @@ public class ButtonController : MonoBehaviour
             return false;
         }
     }
-    
 }
-

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Block
+  - Rank
   layers:
   - Default
   - TransparentFX
@@ -59,4 +60,10 @@ TagManager:
     locked: 0
   - name: Result_UI
     uniqueID: 3606218957
+    locked: 0
+  - name: Warning
+    uniqueID: 3267445037
+    locked: 0
+  - name: Warning_UI
+    uniqueID: 3374661493
     locked: 0

@@ -12,7 +12,7 @@ public class Lobby_achievet : MonoBehaviour
 	void Start ()
 	{
 		int point = PlayerPrefs.GetInt("point");
-		int level = PlayerPrefs.GetInt("level");
+		int level = PlayerPrefs.GetInt("lv");
 
 		point_ui.text = point.ToString();
 		level_ui.text = level.ToString();
