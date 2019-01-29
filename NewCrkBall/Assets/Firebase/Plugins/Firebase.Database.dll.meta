@@ -1,75 +1,118 @@
 fileFormatVersion: 2
-guid: e83b244ec0d14450bf6ed3af79ba515c
+guid: 38a97385f6414d6487a3b199875f79e1
 labels:
 - gvh
-- gvh_version-5.4.4
-timeCreated: 1480838400
+- gvh_version-5.3.1
 PluginImporter:
-  serializedVersion: 1
+  externalObjects: {}
+  serializedVersion: 2
   iconMap: {}
   executionOrder: {}
   isPreloaded: 0
+  isOverridable: 0
   platformData:
-    Android:
+  - first:
+      '': OSXIntel
+    second:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+  - first:
+      '': OSXIntel64
+    second:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+  - first:
+      '': Web
+    second:
+      enabled: 0
+      settings: {}
+  - first:
+      '': WebStreamed
+    second:
+      enabled: 0
+      settings: {}
+  - first:
+      Android: Android
+    second:
       enabled: 1
       settings:
         CPU: AnyCPU
-    Any:
+  - first:
+      Any: 
+    second:
       enabled: 0
       settings: {}
-    Editor:
+  - first:
+      Editor: Editor
+    second:
       enabled: 0
       settings:
         CPU: AnyCPU
         DefaultValueInitialized: true
         OS: AnyOS
-    Linux:
-      enabled: 0
-      settings:
-        CPU: None
-    Linux64:
-      enabled: 0
-      settings:
-        CPU: None
-    LinuxUniversal:
-      enabled: 0
-      settings:
-        CPU: None
-    OSXIntel:
-      enabled: 0
-      settings:
-        CPU: None
-    OSXIntel64:
-      enabled: 0
-      settings:
-        CPU: None
-    OSXUniversal:
-      enabled: 0
-      settings:
-        CPU: None
-    Web:
-      enabled: 0
-      settings: {}
-    WebStreamed:
-      enabled: 0
-      settings: {}
-    Win:
-      enabled: 0
-      settings:
-        CPU: None
-    Win64:
-      enabled: 0
-      settings:
-        CPU: None
-    WindowsStoreApps:
+  - first:
+      Facebook: Win
+    second:
       enabled: 0
       settings:
         CPU: AnyCPU
-    iOS:
+  - first:
+      Facebook: Win64
+    second:
       enabled: 0
       settings:
-        CompileFlags:
-        FrameworkDependencies:
-  userData:
-  assetBundleName:
-  assetBundleVariant:
+        CPU: AnyCPU
+  - first:
+      Standalone: Linux
+    second:
+      enabled: 0
+      settings:
+        CPU: x86
+  - first:
+      Standalone: Linux64
+    second:
+      enabled: 0
+      settings:
+        CPU: x86_64
+  - first:
+      Standalone: LinuxUniversal
+    second:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+  - first:
+      Standalone: OSXUniversal
+    second:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+  - first:
+      Standalone: Win
+    second:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+  - first:
+      Standalone: Win64
+    second:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+  - first:
+      Windows Store Apps: WindowsStoreApps
+    second:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+  - first:
+      iPhone: iOS
+    second:
+      enabled: 0
+      settings:
+        CompileFlags: 
+        FrameworkDependencies: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

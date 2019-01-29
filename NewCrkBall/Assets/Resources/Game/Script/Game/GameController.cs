@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -12,7 +13,7 @@ public class GameController : MonoBehaviour
     public Result result;
     public Ads ads;
     public Game_achievement gameAchievement;
-   
+
     // music
     public AudioSource music_death, music_main;
 
@@ -23,17 +24,21 @@ public class GameController : MonoBehaviour
 
     // attribute
     [SerializeField] private int round, point;
-    
+    private String startTime, endTime;
+
+
     [Header("TitleBar_image")] public GameObject TitleBar_Level;
 
-    void Awake(){
-    //修改当前的FPS
+    void Awake()
+    {
+        //修改当前的FPS
         Application.targetFrameRate = 60;
     }
-    
+
     // Use this for initialization
     void Start()
     {
+        startTime = DateTime.Now.ToString();
         init();
         InvokeRepeating("nextRound", 5, 5f);
         Invoke("nextRoundAnimation", 4.5f);
@@ -59,7 +64,7 @@ public class GameController : MonoBehaviour
         pointUI.transform.localScale = new Vector3(1.2f, 1.2f);
         StartCoroutine(pointScale());
     }
-    
+
     public int getPoint()
     {
         return point;
@@ -111,12 +116,12 @@ public class GameController : MonoBehaviour
         Invoke("nextRoundAnimation", 4.5f);
         lineController.blockHP = round;
         lineController.createLIne();
-        
     }
 
     public void gameover()
     {
-        gameAchievement.newhighPoint(point,round);
+        endTime = DateTime.Now.ToString();
+        gameAchievement.newhighPoint(point, round, startTime, endTime);
         ads.showADS();
         invert.SetFloat("_InvertColors", 0); //確保bug把它關掉
         music_main.volume = 0.1f;
@@ -129,5 +134,4 @@ public class GameController : MonoBehaviour
     {
         result.compute();
     }
-   
 }

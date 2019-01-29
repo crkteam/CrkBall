@@ -8,21 +8,24 @@ using UnityEngine;
 
 public class Game_achievement : MonoBehaviour {
 
-	public void newhighPoint(int point,int lv)
+	public void newhighPoint(int point,int lv,String start,String end)
 	{
 		int current = point;
 		int pre = PlayerPrefs.GetInt("point");
+		int login = PlayerPrefs.GetInt("Login");
 
 		if (current > pre)
 		{
 			PlayerPrefs.SetInt("point",current);
 			PlayerPrefs.SetInt("lv",lv);
 			
-			firebasekeyin(point,lv);
+			if(login > 0)
+				firebasekeyin(point,lv,start,end);
+			
 		}
 	}
 
-	private void firebasekeyin(int point,int lv)
+	private void firebasekeyin(int point,int lv,String start,String end)
 	{
 		String ID = PlayerPrefs.GetString("Std_ID");
 		
@@ -31,5 +34,7 @@ public class Game_achievement : MonoBehaviour {
 		DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference.Child("leaderboard");
 		reference.Child(ID).Child("point").SetValueAsync(point);
 		reference.Child(ID).Child("lv").SetValueAsync(lv);
+		reference.Child(ID).Child("start").SetValueAsync(start);
+		reference.Child(ID).Child("end").SetValueAsync(end);
 	}
 }

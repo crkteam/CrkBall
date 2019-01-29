@@ -17,6 +17,8 @@ public class Login_Listener : MonoBehaviour
 			if (condition == 1)
 			{
 				PlayerPrefs.SetInt("Login",1);
+				PlayerPrefs.SetInt("point",0);
+				PlayerPrefs.SetInt("level",0);
 				PlayerPrefs.SetString("Std_ID",Id);
 				login.SetActive(false);
 			}

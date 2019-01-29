@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class DeadLine : MonoBehaviour
 {
+    public GameObject ball;
     public GameController gameController;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.name.Equals("Block(Clone)"))
         {
+            Destroy(ball);
             gameController.gameover();
         }
 

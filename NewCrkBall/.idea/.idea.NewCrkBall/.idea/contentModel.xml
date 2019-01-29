@@ -12,8 +12,8 @@
             <e p="AppDependencies.xml" t="Include" />
             <e p="AuthDependencies.xml" t="Include" />
             <e p="DatabaseDependencies.xml" t="Include" />
-            <e p="FirebaseAuth_v1.1.2_manifest.txt" t="Include" />
-            <e p="FirebaseDatabase_version-5.4.4_manifest.txt" t="Include" />
+            <e p="FirebaseAuth_v5.3.1_manifest.txt" t="Include" />
+            <e p="FirebaseDatabase_v5.3.1_manifest.txt" t="Include" />
           </e>
           <e p="m2repository" t="Include">
             <e p="com" t="Include">
@@ -98,7 +98,7 @@
         </e>
         <e p="PlayServicesResolver" t="Include">
           <e p="Editor" t="Include">
-            <e p="play-services-resolver_v1.2.98.0.txt" t="Include" />
+            <e p="play-services-resolver_v1.2.92.0.txt" t="Include" />
           </e>
         </e>
         <e p="Resources" t="Include">
