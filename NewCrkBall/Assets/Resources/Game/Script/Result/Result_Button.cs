@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Result_Button : MonoBehaviour {
+public class Result_Button : MonoBehaviour
+{
+    [SerializeField]
+    private InternetDetect InternetDetect;
     private void OnMouseDown()
     {
-        if (InternetDetect())
+        if (InternetDetect.Internetdetect())
         {
             if (gameObject.name.Equals("Result_Home"))
             {
@@ -19,27 +22,10 @@ public class Result_Button : MonoBehaviour {
                 SceneManager.LoadScene("Game");
             }
         }
-    }
-    bool InternetDetect()
-    {
-        if(Application.internetReachability==NetworkReachability.NotReachable)
-        {
-            Debug.Log("尚未開啟網路");
-            return false;
-        }
-        else if(Application.internetReachability==NetworkReachability.ReachableViaLocalAreaNetwork)
-        {
-            Debug.Log("wifi");
-            return true;
-        }
-        else if(Application.internetReachability==NetworkReachability.ReachableViaCarrierDataNetwork)
-        {
-            Debug.Log("行動網路");
-            return true;
-        }
         else
         {
-            return false;
+            Debug.Log("尚未建立連線，請連線上網後在開始遊戲（Result_Button）");
         }
     }
+    
 }

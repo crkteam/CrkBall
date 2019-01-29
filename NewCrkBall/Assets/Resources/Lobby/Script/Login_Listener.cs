@@ -8,7 +8,7 @@ public class Login_Listener : MonoBehaviour
 	private int condition = 0;
 	private String Id;
 
-	public GameObject login;
+	public GameObject login,LoginAlert;
 	// Update is called once per frame
 	void Update () {
 		
@@ -21,6 +21,7 @@ public class Login_Listener : MonoBehaviour
 				PlayerPrefs.SetInt("level",0);
 				PlayerPrefs.SetString("Std_ID",Id);
 				login.SetActive(false);
+				LoginAlert.SetActive(true);
 			}
 
 			

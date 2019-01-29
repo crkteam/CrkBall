@@ -13,10 +13,10 @@ public class ButtonController : MonoBehaviour
 {
     public Image start;
     [SerializeField] private AudioSource Next, Main;
-
+    [SerializeField] private InternetDetect InternetDetect;
     [SerializeField] private Lobby_Firebase lobbyFirebase;
     [SerializeField] private InputField Id, password;
-    [SerializeField] private GameObject login, leaderboard, achievement;
+    [SerializeField] private GameObject login, leaderboard, achievement,LoginAlert;
 
     private void Awake()
     {
@@ -26,7 +26,7 @@ public class ButtonController : MonoBehaviour
 
     public void goGame()
     {
-        if (InternetDetect())
+        if (InternetDetect.Internetdetect())
         {
             if (start.color.a >= 1)
             {
@@ -45,7 +45,7 @@ public class ButtonController : MonoBehaviour
 
     public void open_leaderboard()
     {
-        if (InternetDetect())
+        if (InternetDetect.Internetdetect())
         {
             if (PlayerPrefs.GetInt("Login") != 0)
             {
@@ -58,6 +58,11 @@ public class ButtonController : MonoBehaviour
         }
     }
 
+    public void Close_LoginAlert()
+    {
+        LoginAlert.SetActive(false);
+       
+    }
     public void close_leaderboard()
     {
         leaderboard.SetActive(false);
@@ -88,26 +93,5 @@ public class ButtonController : MonoBehaviour
         Application.OpenURL("https://www.facebook.com/CrkTeam-1996298847156168");
     }
 
-    bool InternetDetect()
-    {
-        if (Application.internetReachability == NetworkReachability.NotReachable)
-        {
-            Debug.Log("尚未開啟網路");
-            return false;
-        }
-        else if (Application.internetReachability == NetworkReachability.ReachableViaLocalAreaNetwork)
-        {
-            Debug.Log("wifi");
-            return true;
-        }
-        else if (Application.internetReachability == NetworkReachability.ReachableViaCarrierDataNetwork)
-        {
-            Debug.Log("行動網路");
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
+  
 }

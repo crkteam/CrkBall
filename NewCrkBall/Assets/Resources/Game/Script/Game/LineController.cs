@@ -54,7 +54,7 @@ public class LineController : MonoBehaviour
                 b_block = block;
                 break;
             case 2: // attack
-                if (Random.value > 0.25f)
+                if (Random.value > 0.44f)
                     b_block = attack;
                 else
                     b_block = block;
