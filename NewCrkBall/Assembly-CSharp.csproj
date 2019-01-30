@@ -94,7 +94,6 @@
     <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\MonoPInvokeCallbackAttribute.cs" />
     <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\RewardBasedVideoAdClient.cs" />
     <Compile Include="Assets\GoogleMobileAds\Platforms\iOS\Utils.cs" />
-    <Compile Include="Assets\Internet_Button.cs" />
     <Compile Include="Assets\Resources\Game\ExternalScript\2D_Destruction\clipper_library\clipper.cs" />
     <Compile Include="Assets\Resources\Game\ExternalScript\2D_Destruction\Scripts\ClipperHelper.cs" />
     <Compile Include="Assets\Resources\Game\ExternalScript\2D_Destruction\Scripts\Explodable.cs" />
@@ -119,6 +118,7 @@
     <Compile Include="Assets\Resources\Game\ExternalScript\2D_Destruction\Unity-delaunay\geom\Polygon.cs" />
     <Compile Include="Assets\Resources\Game\ExternalScript\2D_Destruction\Unity-delaunay\geom\Winding.cs" />
     <Compile Include="Assets\Resources\Game\ExternalScript\2D_Destruction\Unity-delaunay\utils\IDisposable.cs" />
+    <Compile Include="Assets\Resources\Game\ExternalScript\Script\Internet_Button.cs" />
     <Compile Include="Assets\Resources\Game\ExternalScript\Script\InternetDetect.cs" />
     <Compile Include="Assets\Resources\Game\Game_achievement.cs" />
     <Compile Include="Assets\Resources\Game\Script\Game\Attack.cs" />

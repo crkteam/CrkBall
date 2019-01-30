@@ -18168,6 +18168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7264e97499b9142a4bcb016a09988e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chdisconnect: {fileID: 1561873349}
+  endisconnect: {fileID: 1699281830}
 --- !u!58 &1672673889
 CircleCollider2D:
   m_ObjectHideFlags: 0
