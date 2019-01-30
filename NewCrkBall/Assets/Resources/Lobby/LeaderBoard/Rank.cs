@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rank : MonoBehaviour
+public class Rank
 {
     public String name, id, point, lv;
 

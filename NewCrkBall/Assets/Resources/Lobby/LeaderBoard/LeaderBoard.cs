@@ -16,6 +16,7 @@ public class LeaderBoard : MonoBehaviour
     public Rank[] texts;
     public GameObject leaderboard;
 
+    public GameObject self;
     private int condition = 0;
 
     private void Awake()
@@ -33,18 +34,28 @@ public class LeaderBoard : MonoBehaviour
             Rank buffer = new Rank();
             texts[i] = buffer;
         }
+
         leaderboard.SetActive(false);
     }
 
     public void show()
     {
         leaderboard.SetActive(true);
+        showself();
         firebase_Keyin();
     }
 
     private void showself()
     {
-        
+        String id = PlayerPrefs.GetString("Std_ID");
+        int point = PlayerPrefs.GetInt("point");
+        int level = PlayerPrefs.GetInt("lv");
+
+        Text[] bufferText = self.GetComponentsInChildren<Text>();
+
+        bufferText[1].text = id;
+        bufferText[2].text = "Lv " + level;
+        bufferText[0].text = point.ToString();
     }
 
     private void Update() //listener
@@ -59,14 +70,14 @@ public class LeaderBoard : MonoBehaviour
 
     private void ui_Keyin()
     {
-        int count = texts_ui.Count-1;
+        int count = texts_ui.Count - 1;
 
         for (int i = 0; i < texts_ui.Count; i++)
         {
-                texts_ui[i][1].text = texts[i].id;
-                texts_ui[i][2].text = texts[i].name;
-                texts_ui[i][3].text = texts[i].lv;
-                texts_ui[i][4].text = texts[i].point;
+            texts_ui[i][1].text = texts[i].id;
+            texts_ui[i][2].text = texts[i].name;
+            texts_ui[i][3].text = texts[i].lv;
+            texts_ui[i][4].text = texts[i].point;
         }
     }
 
@@ -84,19 +95,27 @@ public class LeaderBoard : MonoBehaviour
                 }
                 else if (task.IsCompleted)
                 {
-                    
                     DataSnapshot snapshot = task.Result;
-                    int count = snapshot.Children.Count()-1;
+                    int count = snapshot.Children.Count() - 1;
                     // Do something with snapshot...
                     foreach (var VARIABLE in snapshot.Children)
                     {
+                        String buffer = VARIABLE.Child("name").Value.ToString();
+                        Char[] char_buffer = buffer.ToCharArray();
+                        char_buffer[1] = 'X';
+
+                        String result = "";
+                        foreach (var value in char_buffer)
+                        {
+                            result += value;
+                        }
                         texts[count].id = VARIABLE.Key;
-                        texts[count].name = VARIABLE.Child("name").Value.ToString();
-                        texts[count].lv = VARIABLE.Child("lv").Value.ToString();
+                        texts[count].name = result;
+                        texts[count].lv = "Lv " + VARIABLE.Child("lv").Value.ToString();
                         texts[count].point = VARIABLE.Child("point").Value.ToString();
-                        Debug.Log(texts[count].point);
                         count--;
                     }
+
                     condition = 1;
                 }
             });

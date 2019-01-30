@@ -43,7 +43,7 @@ public class Lobby_Firebase : MonoBehaviour
                     DataSnapshot snapshot = task.Result;
                     // Do something with snapshot...
                     current_password = snapshot.Value.ToString();
-
+                    
                     if (password.Equals(current_password))
                     {
                         loginListener.SetCondition(1); // 1登入成功

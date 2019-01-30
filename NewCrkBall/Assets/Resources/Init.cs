@@ -11,6 +11,7 @@ public class Init : MonoBehaviour {
             PlayerPrefs.SetInt("point",0);
             PlayerPrefs.SetInt("level",0);
             PlayerPrefs.SetInt("Init",1);
+            PlayerPrefs.SetInt("battle",0);
             Debug.Log("初始化");
         }
     }

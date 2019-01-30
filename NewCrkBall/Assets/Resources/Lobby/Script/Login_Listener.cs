@@ -18,7 +18,7 @@ public class Login_Listener : MonoBehaviour
 			{
 				PlayerPrefs.SetInt("Login",1);
 				PlayerPrefs.SetInt("point",0);
-				PlayerPrefs.SetInt("level",0);
+				PlayerPrefs.SetInt("lv",0);
 				PlayerPrefs.SetString("Std_ID",Id);
 				login.SetActive(false);
 				LoginAlert.SetActive(true);
@@ -45,4 +45,5 @@ public class Login_Listener : MonoBehaviour
 	{
 		Id = id;
 	}
+	
 }

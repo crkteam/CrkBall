@@ -13,14 +13,21 @@ public class Game_achievement : MonoBehaviour {
 		int current = point;
 		int pre = PlayerPrefs.GetInt("point");
 		int login = PlayerPrefs.GetInt("Login");
+		int battle = PlayerPrefs.GetInt("battle");
 
 		if (current > pre)
 		{
 			PlayerPrefs.SetInt("point",current);
 			PlayerPrefs.SetInt("lv",lv);
-			
-			if(login > 0)
-				firebasekeyin(point,lv,start,end);
+
+			if (login > 0)
+			{
+				if (battle == 1)
+				{
+					firebasekeyin(point,lv,start,end);
+				}
+			}
+
 			
 		}
 	}

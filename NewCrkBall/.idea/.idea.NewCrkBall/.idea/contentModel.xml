@@ -196,6 +196,7 @@
             <e p="Script" t="Include">
               <e p="AutoScreenLobby.cs" t="Include" />
               <e p="ButtonController.cs" t="Include" />
+              <e p="Center_Controller.cs" t="Include" />
               <e p="Click.cs" t="Include" />
               <e p="Lobby_achievet.cs" t="Include" />
               <e p="Lobby_Firebase.cs" t="Include" />

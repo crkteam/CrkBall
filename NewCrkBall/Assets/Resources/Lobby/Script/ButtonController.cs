@@ -16,12 +16,13 @@ public class ButtonController : MonoBehaviour
     [SerializeField] private InternetDetect InternetDetect;
     [SerializeField] private Lobby_Firebase lobbyFirebase;
     [SerializeField] private InputField Id, password;
-    [SerializeField] private GameObject login, leaderboard, achievement,LoginAlert;
+    [SerializeField] private GameObject login, leaderboard, achievement,LoginAlert,battle;
 
     private void Awake()
     {
         //修改当前的FPS
         Application.targetFrameRate = 60;
+        
     }
 
     public void goGame()
@@ -47,13 +48,20 @@ public class ButtonController : MonoBehaviour
     {
         if (InternetDetect.Internetdetect())
         {
-            if (PlayerPrefs.GetInt("Login") != 0)
+            if (PlayerPrefs.GetInt("battle") != 0) // 這裡改
             {
-                gameObject.GetComponent<LeaderBoard>().show();
+                if (PlayerPrefs.GetInt("Login") != 0)
+                {
+                    gameObject.GetComponent<LeaderBoard>().show();
+                }
+                else
+                {
+                    login.SetActive(true);
+                }
             }
             else
             {
-                login.SetActive(true);
+                battle.SetActive(true);
             }
         }
     }

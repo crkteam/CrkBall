@@ -7539,8 +7539,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 577346874}
   m_HandleRect: {fileID: 0}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.18083385
+  m_Value: 0.99999994
+  m_Size: 0.18083383
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -14618,6 +14618,7 @@ GameObject:
   - component: {fileID: 1827009650}
   - component: {fileID: 1827009651}
   - component: {fileID: 1827009648}
+  - component: {fileID: 1827009652}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -14710,6 +14711,7 @@ MonoBehaviour:
   leaderboard: {fileID: 1040823308}
   achievement: {fileID: 1762043701}
   LoginAlert: {fileID: 1685965437}
+  battle: {fileID: 0}
 --- !u!114 &1827009647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14821,11 +14823,19 @@ MonoBehaviour:
   - {fileID: 937460590}
   - {fileID: 1581233192}
   - {fileID: 855352907}
-  texts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   leaderboard: {fileID: 1040823308}
+  self: {fileID: 939803452}
+--- !u!114 &1827009652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1827009641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c78a00ffabe95804383ec893ee88779d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1835593248
 GameObject:
   m_ObjectHideFlags: 0
@@ -14893,7 +14903,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5289X\u8C6A"
+  m_Text: "\u6211"
 --- !u!222 &1835593251
 CanvasRenderer:
   m_ObjectHideFlags: 0
