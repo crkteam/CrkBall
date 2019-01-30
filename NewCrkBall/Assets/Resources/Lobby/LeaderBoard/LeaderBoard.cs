@@ -21,7 +21,7 @@ public class LeaderBoard : MonoBehaviour
     private void Awake()
     {
         leaderboard.SetActive(true);
-        rank = GameObject.FindGameObjectsWithTag("Rank");
+//        rank = GameObject.FindGameObjectsWithTag("Rank");
         texts = new Rank[50];
         foreach (var VARIABLE in rank)
         {
@@ -75,7 +75,7 @@ public class LeaderBoard : MonoBehaviour
         // Set this before calling into the realtime database.
         FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://crkball-49368.firebaseio.com/");
         FirebaseDatabase.DefaultInstance
-            .GetReference("leaderboard").OrderByChild("point").LimitToLast(3)
+            .GetReference("leaderboard").OrderByChild("point").LimitToLast(50)
             .GetValueAsync().ContinueWith(task =>
             {
                 if (task.IsFaulted)
@@ -94,6 +94,7 @@ public class LeaderBoard : MonoBehaviour
                         texts[count].name = VARIABLE.Child("name").Value.ToString();
                         texts[count].lv = VARIABLE.Child("lv").Value.ToString();
                         texts[count].point = VARIABLE.Child("point").Value.ToString();
+                        Debug.Log(texts[count].point);
                         count--;
                     }
                     condition = 1;

@@ -145,6 +145,9 @@
                   </e>
                 </e>
               </e>
+              <e p="Script" t="Include">
+                <e p="InternetDetect.cs" t="Include" />
+              </e>
             </e>
             <e p="Game_achievement.cs" t="Include" />
             <e p="Script" t="Include">
@@ -199,7 +202,6 @@
               <e p="Login_Listener.cs" t="Include" />
             </e>
           </e>
-          <e p="Test.cs" t="Include" />
           <e p="Warning" t="Include">
             <e p="Warning.cs" t="Include" />
           </e>
