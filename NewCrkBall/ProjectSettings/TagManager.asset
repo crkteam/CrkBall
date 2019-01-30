@@ -67,3 +67,6 @@ TagManager:
   - name: Warning_UI
     uniqueID: 3374661493
     locked: 0
+  - name: Disconnect_UI
+    uniqueID: 3723580933
+    locked: 0

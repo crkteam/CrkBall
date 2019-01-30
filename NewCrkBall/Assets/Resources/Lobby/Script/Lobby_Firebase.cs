@@ -11,7 +11,6 @@ using UnityEngine;
 public class Lobby_Firebase : MonoBehaviour
 {
     public Login_Listener loginListener;
-
     public void check(String id, String password)
     {
         if (id.Length == 8)
@@ -46,6 +45,7 @@ public class Lobby_Firebase : MonoBehaviour
                     
                     if (password.Equals(current_password))
                     {
+                       
                         loginListener.SetCondition(1); // 1登入成功
                         loginListener.SetID(id);
                         Debug.Log("登入成功");
@@ -55,8 +55,10 @@ public class Lobby_Firebase : MonoBehaviour
                         loginListener.SetCondition(2); // 2密碼失敗
                         Debug.Log("密碼錯誤");
                     }
+                  
                 }
                 
             });
     }
+
 }

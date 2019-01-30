@@ -11,7 +11,8 @@ public class Pause_Button : MonoBehaviour {
         if (gameObject.name.Equals("Return"))
         {
             GameObject.Find("pause_background").SetActive(false);
-            
+            GameObject.Find("Board").GetComponent<Board>().enabled = true;
+
         }
 
         if (gameObject.name.Equals("Exit"))

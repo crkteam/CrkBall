@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour
 
 
     [Header("TitleBar_image")] public GameObject TitleBar_Level;
-
+    public GameObject chdisconnect,endisconnect;
     void Awake()
     {
         //修改当前的FPS
@@ -38,6 +38,10 @@ public class GameController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        chdisconnect.GetComponent<MeshRenderer>().sortingLayerName = "Disconnect_UI";
+        endisconnect.GetComponent<MeshRenderer>().sortingLayerName = "Disconnect_UI";
+        chdisconnect.GetComponent<MeshRenderer>().sortingOrder = 3;
+        endisconnect.GetComponent<MeshRenderer>().sortingOrder = 3;
         startTime = DateTime.Now.ToString();
         init();
         InvokeRepeating("nextRound", 5, 5f);

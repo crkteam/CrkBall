@@ -16,18 +16,29 @@ public class ButtonController : MonoBehaviour
     [SerializeField] private InternetDetect InternetDetect;
     [SerializeField] private Lobby_Firebase lobbyFirebase;
     [SerializeField] private InputField Id, password;
-    [SerializeField] private GameObject login, leaderboard, achievement,LoginAlert,battle;
+    [SerializeField] private GameObject login, leaderboard, achievement, LoginAlert, battle, internet,accounterror;
+    [SerializeField] private AsyncOperation asyncOperation;
 
     private void Awake()
     {
         //修改当前的FPS
         Application.targetFrameRate = 60;
-        
+    }
+
+    void Start()
+    {
+        if (!internet.GetComponent<InternetDetect>().Internetdetect())
+        {
+            internet.SetActive(true);
+        }
+
+        asyncOperation = SceneManager.LoadSceneAsync("Game");
+        asyncOperation.allowSceneActivation = false;
     }
 
     public void goGame()
     {
-        if (InternetDetect.Internetdetect())
+        if (internet.GetComponent<InternetDetect>().Internetdetect())
         {
             if (start.color.a >= 1)
             {
@@ -37,11 +48,30 @@ public class ButtonController : MonoBehaviour
                 Invoke("next", 1);
             }
         }
+        else
+        {
+            internet.SetActive(true);
+        }
+    }
+
+    public void close_internet()
+    {
+        internet.SetActive(false);
     }
 
     void next()
     {
-        SceneManager.LoadScene("Game");
+        asyncOperation.allowSceneActivation = true;
+    }
+
+    public void close_Accounterror()
+    {
+        accounterror.SetActive(!accounterror.activeSelf);
+    }
+  
+    public void close_battle()
+    {
+        battle.SetActive(false);
     }
 
     public void open_leaderboard()
@@ -69,8 +99,8 @@ public class ButtonController : MonoBehaviour
     public void Close_LoginAlert()
     {
         LoginAlert.SetActive(false);
-       
     }
+
     public void close_leaderboard()
     {
         leaderboard.SetActive(false);
@@ -93,13 +123,19 @@ public class ButtonController : MonoBehaviour
 
     public void login_check()
     {
-        lobbyFirebase.check(Id.text, password.text);
+        if (internet.GetComponent<InternetDetect>().Internetdetect())
+        {
+              lobbyFirebase.check(Id.text, password.text);
+        }
+        else
+        {
+            internet.SetActive(true);
+        }
+      
     }
 
     public void openFan()
     {
         Application.OpenURL("https://www.facebook.com/CrkTeam-1996298847156168");
     }
-
-  
 }

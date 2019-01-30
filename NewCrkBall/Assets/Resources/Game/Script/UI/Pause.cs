@@ -16,6 +16,7 @@ public class Pause : MonoBehaviour
         background.color = buffer;
         gameObject.GetComponent<Animator>().SetTrigger("Pause");
         GameObject.Find("Click").GetComponent<AudioSource>().Play();
+        GameObject.Find("Board").GetComponent<Board>().enabled = false;
         point.GetComponent<MeshRenderer>().sortingLayerName = "3";
         UI.SetActive(true);
         Time.timeScale = 0;

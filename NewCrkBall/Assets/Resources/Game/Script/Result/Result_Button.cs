@@ -5,15 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Result_Button : MonoBehaviour
 {
-    [SerializeField]
-    private InternetDetect InternetDetect;
+    [SerializeField] private InternetDetect InternetDetect;
+
+    [SerializeField] private GameObject InternetAlert;
+
     private void OnMouseDown()
     {
         if (InternetDetect.Internetdetect())
         {
             if (gameObject.name.Equals("Result_Home"))
             {
-
                 SceneManager.LoadScene("Lobby");
             }
 
@@ -24,8 +25,7 @@ public class Result_Button : MonoBehaviour
         }
         else
         {
-            Debug.Log("尚未建立連線，請連線上網後在開始遊戲（Result_Button）");
+            InternetAlert.SetActive(true);
         }
     }
-    
 }
