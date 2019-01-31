@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:583852058245:android:5236980122f52e84",
+        "mobilesdk_app_id": "1:583852058245:android:0d1d5bf842e827a1",
         "android_client_info": {
-          "package_name": "com.crkteam.crkball"
+          "package_name": "com.CrkTeam.CrkBakk"
         }
       },
       "oauth_client": [
