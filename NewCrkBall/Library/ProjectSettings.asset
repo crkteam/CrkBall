@@ -154,7 +154,7 @@ PlayerSettings:
     Android: com.CrkTeam.CrkBakk
     Standalone: com.Company.ProductName
   buildNumber: {}
-  AndroidBundleVersionCode: 6
+  AndroidBundleVersionCode: 7
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -243,7 +243,7 @@ PlayerSettings:
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: C:/Users/CrkJK/Desktop/Git/CrkBall/NewCrkBall/crkball.keystore
-  AndroidKeyaliasName: jack
+  AndroidKeyaliasName: 
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   AndroidEnableTango: 0
