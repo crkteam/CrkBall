@@ -146,6 +146,7 @@
                 </e>
               </e>
               <e p="Script" t="Include">
+                <e p="Internet_Button.cs" t="Include" />
                 <e p="InternetDetect.cs" t="Include" />
               </e>
             </e>
@@ -201,6 +202,7 @@
               <e p="Lobby_achievet.cs" t="Include" />
               <e p="Lobby_Firebase.cs" t="Include" />
               <e p="Login_Listener.cs" t="Include" />
+              <e p="LoginAlert.cs" t="Include" />
             </e>
           </e>
           <e p="Warning" t="Include">

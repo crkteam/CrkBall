@@ -5,7 +5,7 @@ SceneListBegin?
 Assets/Scenes/Lobby.unity
 Assets/Scenes/Game.unity
 SceneListEnd?
-972076141260124e6171e5fd7312fa8d Assembly-CSharp.dll:.Result_Button
+d982bbf3ee6cc1f07eb4d3aef3475120 Assembly-CSharp.dll:.Result_Button
 bb5a5fd2e973b5443e8ad00e7ea55f39 Assembly-CSharp.dll:.Skill_burst
 ae8e110300f589ab1a5501ae52c5ec8d Assembly-CSharp.dll:.AutoScreenLobby
 541f92cf6934ca32d4be8caaae6e9374 Assembly-CSharp.dll:.Flicker
@@ -14,14 +14,16 @@ ae8e110300f589ab1a5501ae52c5ec8d Assembly-CSharp.dll:.AutoScreenLobby
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Pause_Button
 d18b1872067d1eb3eee15b5fb6f8c8fc Assembly-CSharp.dll:.CreatFlicker
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Ads
+67407f15ceb50dd4c0698ee633dee2b2 Assembly-CSharp.dll:.Internet_Button
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 ae7e1cb71980c33b6e744ab7a888ce72 Assembly-CSharp.dll:.DeadLine
 122ea046b051ac2cb528491bfe5f6fc0 Assembly-CSharp.dll:.Lobby_achievet
+3bd0bb106132dfeecb5751709148eb13 Assembly-CSharp.dll:.LoginAlert
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LeaderBoaed_Controller
 28b5a5163942cb75702260339ecc2f89 Assembly-CSharp.dll:.Ball
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.ExplodableFragments
-37e26b85286279e8c91aabee83268442 Assembly-CSharp.dll:.ButtonController
+ad45003a1724f46d804387245ee5b091 Assembly-CSharp.dll:.ButtonController
 05715886f620d84881b0b2c9f8cdf026 Assembly-CSharp.dll:.Burst_music
 191476cb08675d5c2d2115fc1763cd3d Assembly-CSharp.dll:.AutoScreen
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Board
@@ -39,10 +41,11 @@ b5ac44eb86da3d37309c91b6b176beda Assembly-CSharp.dll:.Line
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.InternetDetect
 104e8195aac50f2ac1464eff7c83f9fb Assembly-CSharp.dll:.LineController
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Game_achievement
-59167aea7319bbfee0e3323e778468b4 Assembly-CSharp.dll:.Login_Listener
+8ab255df29f2047324fd4be0554bfc2c Assembly-CSharp.dll:.Login_Listener
 f7b349d44b3827550912609843ea65c4 Assembly-CSharp.dll:.BlockHolder
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Warning
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Attack
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Center_Controller
 0a555751ee6ff1422043e1848b8ea151 Assembly-CSharp.dll:.GameController
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
@@ -183,4 +186,3 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Center_Controller
