@@ -1,6 +1,6 @@
 iOS
 PlayerPath?
-/Users/crkjk/Desktop/ffff
+/Users/crkjk/Desktop/CrkBall_ios
 SceneListBegin?
 Assets/Scenes/Lobby.unity
 Assets/Scenes/Game.unity
